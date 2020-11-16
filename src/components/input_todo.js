@@ -1,4 +1,4 @@
-const inputTodo = () => `
+const inputBook = () => `
 <form id="form">
   <div>
     <label for="title">Title</label>
@@ -18,4 +18,4 @@ const inputTodo = () => `
 
   <input type="submit" value="Submit">
 </form>`;
-export default inputTodo;
+export default inputBook;
