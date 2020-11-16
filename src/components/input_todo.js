@@ -1,5 +1,7 @@
-const inputBook = () => `
-<form id="form">
+import styles from '../styles/input_todo.module.css';
+
+const inputTodo = () => `
+<form id="input-todo" class="${styles.inputTodo}">
   <div>
     <label for="title">Title</label>
     <input type="text" id="title" name="title">
@@ -18,4 +20,6 @@ const inputBook = () => `
 
   <input type="submit" value="Submit">
 </form>`;
-export default inputBook;
+
+
+export default inputTodo;

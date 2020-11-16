@@ -1,8 +1,6 @@
-
 import styles from '../styles/todo_element.module.css';
 
 const todoElement = todoObject => {
-  console.log('test');
   const { title, description, priority } = todoObject;
   return `
     <div class="${styles.todoContainer}">
