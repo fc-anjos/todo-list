@@ -1,13 +1,19 @@
-import { todoForm } from './components/todo-form';
-import { ProjectBtn, TodoBtn } from './components/buttons';
-import projectForm from './components/project-form';
+import { inputTodo } from './components/input-todo';
+import inputProject from './components/input-project';
 import todoContainer from './components/todo-container';
 import addAllEventListeners from './utils/event-listeners';
 
+const TodoBtn = () => `
+  <button id="add-new-todo" class="btn">Add new Todo</button>
+`;
+
+const ProjectBtn = () => `
+  <button id="add-new-project" class="btn">Add new Project</button>
+`;
 
 const home = () => `
-  ${todoForm()}
-  ${projectForm()}
+  ${inputTodo()}
+  ${inputProject()}
   ${TodoBtn()}
   ${ProjectBtn()}
   ${todoContainer()}

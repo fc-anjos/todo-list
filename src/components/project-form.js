@@ -1,6 +1,6 @@
 import styles from '../styles/input_project.module.css';
 
-const inputProject = () => `
+const projectForm = () => `
 <h2>Add Project</h2>
 <form id="input-project" class="${styles.inputProject}">
   <div>
@@ -12,4 +12,4 @@ const inputProject = () => `
 </form>`;
 
 
-export default inputProject;
+export default projectForm;
