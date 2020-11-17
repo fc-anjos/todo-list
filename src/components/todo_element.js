@@ -1,11 +1,14 @@
 import styles from '../styles/todo_element.module.css';
 
-const todoElement = ({
-  title,
-  description,
-  priority,
-  project,
-}) => `
+const todoElement = todo => {
+  const {
+    title,
+    description,
+    priority,
+    project,
+  } = todo;
+
+  return `
     <div class="${styles.todoContainer}">
       <div class="test">${title}</div>
       <div>${description}</div>
@@ -13,27 +16,26 @@ const todoElement = ({
       <div>${project}</div>
     </div>
     `;
-
-const todo = ({
-  title, description, priority, project,
-}) => {
-  const toHtml = () => todoElement({
-    title, description, priority, project,
-  });
-
-  return {
-    title, description, priority, project, toHtml,
-  };
 };
 
-const tagsReducer = project => `${project}`;
 
-const projectToTag = project => project[0] + project[1].map(todoElement).reduce(tagsReducer)[0];
+const projectToTag = project => {
+  const title = project[0];
+  const content = project[1];
+  const isEmpty = content.length === 0;
+  const genTags = (title, content) => title + content.map(todoElement).join('');
+
+  if (isEmpty) {
+    return `Project ${title} has no tagas`;
+  }
+  return genTags(title, content);
+};
 
 const drawTodos = projects => {
   const projectsEntries = Object.entries(projects);
-  const projectTags = projectsEntries.map(projectToTag);
-  console.log(projectTags);
+  const projectTags = projectsEntries.map(projectToTag).join('');
+  const container = document.getElementById('todo-container');
+  container.innerHTML = projectTags;
 };
 
-export { drawTodos, todo };
+export default drawTodos;

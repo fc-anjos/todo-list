@@ -1,8 +1,8 @@
+import todo from './todo';
 import { inputTodo, updateProjectOptions } from './components/input_todo';
 import inputProject from './components/input_project';
-import { todo, drawTodos } from './components/todo_element';
+import drawTodos from './components/todo_element';
 import todoContainer from './components/todo_container';
-
 
 const projects = {};
 
@@ -24,6 +24,7 @@ const handleProjectForm = e => {
     projects[object.name] = [];
   }
   updateProjectOptions(Object.keys(projects));
+  drawTodos(projects);
 };
 
 const addTodoFormEventListener = () => {
