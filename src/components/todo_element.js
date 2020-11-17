@@ -11,4 +11,15 @@ const todoElement = todoObject => {
     `;
 };
 
-export default todoElement;
+const todo = object => ({
+  toHtml: () => todoElement(object),
+});
+
+const todoHtmlReducer = (accumulator, todo) => accumulator + todo.toHtml();
+
+const drawTodos = todoArray => {
+  const allTodos = todoArray.reduce(todoHtmlReducer, '');
+  document.getElementById('todo-container').innerHTML = allTodos;
+};
+
+export { drawTodos, todo };
