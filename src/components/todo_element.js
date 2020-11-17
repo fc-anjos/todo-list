@@ -1,25 +1,39 @@
 import styles from '../styles/todo_element.module.css';
 
-const todoElement = todoObject => {
-  const { title, description, priority } = todoObject;
-  return `
+const todoElement = ({
+  title,
+  description,
+  priority,
+  project,
+}) => `
     <div class="${styles.todoContainer}">
       <div class="test">${title}</div>
       <div>${description}</div>
       <div>${priority}</div>
+      <div>${project}</div>
     </div>
     `;
+
+const todo = ({
+  title, description, priority, project,
+}) => {
+  const toHtml = () => todoElement({
+    title, description, priority, project,
+  });
+
+  return {
+    title, description, priority, project, toHtml,
+  };
 };
 
-const todo = object => ({
-  toHtml: () => todoElement(object),
-});
+const tagsReducer = project => `${project}`;
 
-const todoHtmlReducer = (accumulator, todo) => accumulator + todo.toHtml();
+const projectToTag = project => project[0] + project[1].map(todoElement).reduce(tagsReducer)[0];
 
-const drawTodos = todoArray => {
-  const allTodos = todoArray.reduce(todoHtmlReducer, '');
-  document.getElementById('todo-container').innerHTML = allTodos;
+const drawTodos = projects => {
+  const projectsEntries = Object.entries(projects);
+  const projectTags = projectsEntries.map(projectToTag);
+  console.log(projectTags);
 };
 
 export { drawTodos, todo };

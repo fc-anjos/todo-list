@@ -4,7 +4,6 @@ import { todo, drawTodos } from './components/todo_element';
 import todoContainer from './components/todo_container';
 
 
-const todoArray = [];
 const projects = {};
 
 const handleTodoForm = e => {
@@ -12,8 +11,8 @@ const handleTodoForm = e => {
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
   const newTodo = todo(object);
-  todoArray.push(newTodo);
-  drawTodos(todoArray);
+  projects[object.project].push(newTodo);
+  drawTodos(projects);
 };
 
 
@@ -81,6 +80,5 @@ const drawHome = () => {
 window.addEventListener('DOMContentLoaded', () => {
   drawHome();
   addAllEventListeners();
-  drawTodos(todoArray);
   updateProjectOptions(Object.keys(projects));
 });
