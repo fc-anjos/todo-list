@@ -1,4 +1,22 @@
+.src-styles-input_todo-module__inputTodo--2ljbb {
+  display: none;
+}
+
+
+
+.src-styles-input_project-module__inputProject--1M_VC {
+  display: none;
+}
+
 .src-styles-todo_element-module__todoContainer--1wDP9 {
-  background-color: red;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+
+
+.src-styles-todo_container-module__todoContainer--30VKB {
+
 }
 
