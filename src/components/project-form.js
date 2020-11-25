@@ -1,6 +1,8 @@
+import { HideProjectFormBtn } from './buttons';
 import styles from '../styles/input_project.module.css';
 
 const projectForm = () => `
+${HideProjectFormBtn()}
 <h2>Add Project</h2>
 <form id="input-project" class="${styles.inputProject}">
   <div>

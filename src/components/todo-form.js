@@ -1,4 +1,5 @@
 import styles from '../styles/input_todo.module.css';
+import { HideTodoFormBtn } from './buttons';
 
 const projectOption = projectName => `
 <option value="${projectName}">${projectName}</option>
@@ -13,6 +14,7 @@ const updateProjectOptions = projectNames => {
 };
 
 const todoForm = () => `
+${HideTodoFormBtn()}
 <h2>Add Todo</h2>
 <form id="input-todo" class="${styles.inputTodo}">
   <div>

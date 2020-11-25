@@ -24,16 +24,34 @@ const handleProjectForm = e => {
   drawTodos(projects);
 };
 
-function toggleVisibility(targetID) {
+const showEl = targetID => {
   const el = document.getElementById(targetID);
-  el.style.display = (el.style.display === 'none'
-                      || el.style.display === '') ? 'block' : 'none';
-}
+  el.style.display = 'block';
+};
 
-const toggleVisibilityButton = ({ btnId, targetId }) => {
-  const btn = document.getElementById(btnId);
-  btn.addEventListener('click', () => toggleVisibility(targetId));
-  return btn.outerHTML;
+const hideEl = targetID => {
+  const el = document.getElementById(targetID);
+  el.style.display = 'none';
+};
+
+const toggleVisibilityButton = ({
+  showBtnId,
+  hideBtnId,
+  targetId,
+}) => {
+  const showBtn = document.getElementById(showBtnId);
+  showBtn.addEventListener('click', () => {
+    showEl(targetId);
+    showEl(hideBtnId);
+    hideEl(showBtnId);
+  });
+
+  const hideBtn = document.getElementById(hideBtnId);
+  hideBtn.addEventListener('click', () => {
+    hideEl(targetId);
+    hideEl(hideBtnId);
+    showEl(showBtnId);
+  });
 };
 
 const addTodoFormEventListener = () => {
@@ -46,12 +64,21 @@ const addProjectFormEventListener = () => {
   form.addEventListener('submit', e => handleProjectForm(e));
 };
 
-
 const addAllEventListeners = () => {
   addTodoFormEventListener();
   addProjectFormEventListener();
-  toggleVisibilityButton({ btnId: 'add-new-todo', targetId: 'input-todo' });
-  toggleVisibilityButton({ btnId: 'add-new-project', targetId: 'input-project' });
+
+  toggleVisibilityButton({
+    showBtnId: 'add-new-todo',
+    hideBtnId: 'hide-new-todo',
+    targetId: 'input-todo',
+  });
+
+  toggleVisibilityButton({
+    showBtnId: 'add-new-project',
+    hideBtnId: 'hide-new-project',
+    targetId: 'input-project',
+  });
 };
 
 export default addAllEventListeners;
