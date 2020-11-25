@@ -14,31 +14,33 @@ const updateProjectOptions = projectNames => {
 };
 
 const todoForm = () => `
-${HideTodoFormBtn()}
-<h2>Add Todo</h2>
-<form id="input-todo" class="${styles.inputTodo}">
-  <div>
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title">
-  </div>
+<div id="todo-form-container" class="${styles.inputTodo}">
+  <h2>Add Todo</h2>
+  ${HideTodoFormBtn()}
+  <form id="input-todo">
+    <div>
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title">
+    </div>
 
-  <div>
-    <label for="description">Description</label>
-    <input type="text" id="description" name="description">
-  </div>
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description">
+    </div>
 
-  <div>
-    <label for="priority">Priority</label>
-    <input type="number" id="number" name="priority">
-  </div>
+    <div>
+      <label for="priority">Priority</label>
+      <input type="number" id="number" name="priority">
+    </div>
 
-  <div>
-    <label for="project">Project</label>
-    <select name="project" id="project-select">
-    </select>
-  </div>
+    <div>
+      <label for="project">Project</label>
+      <select name="project" id="project-select">
+      </select>
+    </div>
 
-  <input type="submit" value="Submit">
+    <input type="submit" value="Submit">
+  </div>
 </form>`;
 
 

@@ -7,7 +7,6 @@ import projectForm from './components/project-form';
 import todoContainer from './components/todo-container';
 import addAllEventListeners from './utils/event-listeners';
 
-
 const home = () => `
   ${todoForm()}
   ${projectForm()}

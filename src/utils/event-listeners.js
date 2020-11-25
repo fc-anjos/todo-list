@@ -2,7 +2,8 @@ import todo from '../todo';
 import drawTodos from '../components/todo_element';
 import { updateProjectOptions } from '../components/input_todo';
 
-const projects = {};
+
+const projects = { default: [] };
 
 const handleTodoForm = e => {
   e.preventDefault();
@@ -65,19 +66,22 @@ const addProjectFormEventListener = () => {
 };
 
 const addAllEventListeners = () => {
+  updateProjectOptions(Object.keys(projects));
+  drawTodos(projects);
+
   addTodoFormEventListener();
   addProjectFormEventListener();
 
   toggleVisibilityButton({
     showBtnId: 'add-new-todo',
     hideBtnId: 'hide-new-todo',
-    targetId: 'input-todo',
+    targetId: 'todo-form-container',
   });
 
   toggleVisibilityButton({
     showBtnId: 'add-new-project',
     hideBtnId: 'hide-new-project',
-    targetId: 'input-project',
+    targetId: 'project-form-container',
   });
 };
 
