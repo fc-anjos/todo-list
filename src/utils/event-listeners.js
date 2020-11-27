@@ -1,6 +1,5 @@
 import todo from '../todo';
 import project from '../project';
-import projects from '../projects';
 import drawTodos from '../components/todo_element';
 import { updateProjectOptions } from '../components/todo-form';
 
