@@ -1,7 +1,7 @@
 import styles from '../styles/buttons.module.css';
 
-const ShowTodoFormBtn = () => `
-  <button id="add-new-todo" class="${styles.add}">Add new Todo</button>
+const ShowTaskFormBtn = () => `
+  <button id="add-new-task" class="${styles.add}">Add new Task</button>
 `;
 
 const ShowProjectFormBtn = () => `
@@ -12,13 +12,13 @@ const HideProjectFormBtn = () => `
   <button id="hide-new-project" class="${styles.hide}">X</button>
 `;
 
-const HideTodoFormBtn = () => `
-  <button id="hide-new-todo" class="${styles.hide}">X</button>
+const HideTaskFormBtn = () => `
+  <button id="hide-new-task" class="${styles.hide}">X</button>
 `;
 
 export {
   ShowProjectFormBtn,
-  ShowTodoFormBtn,
-  HideTodoFormBtn,
+  ShowTaskFormBtn,
+  HideTaskFormBtn,
   HideProjectFormBtn,
 };

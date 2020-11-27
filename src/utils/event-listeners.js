@@ -1,8 +1,9 @@
-import todo from '../todo';
+import task from '../task';
 import project from '../project';
-import drawTodos from '../components/todo_element';
-import { updateProjectOptions } from '../components/todo-form';
+import drawTodos from '../components/task-element';
+import { updateProjectOptions } from '../components/task-form';
 
+const projects = {};
 const showEl = targetID => {
   const el = document.getElementById(targetID);
   el.style.display = 'block';
@@ -13,14 +14,14 @@ const hideEl = targetID => {
   el.style.display = 'none';
 };
 
-const handleTodoForm = e => {
+const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const object = Object.fromEntries(formData);
-  const newTodo = todo(object);
-  projects[object.project].push(newTodo);
-  hideEl('todo-form-container');
-  showEl('add-new-todo');
+  const taskInfo = Object.fromEntries(formData);
+  const newTodo = task(taskInfo);
+  projects[taskInfo.project].appendTask(newTodo);
+  hideEl('task-form-container');
+  showEl('add-new-task');
   drawTodos(projects);
   e.target.reset();
 };
@@ -29,7 +30,7 @@ const handleProjectForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
-  if (projects[object.name] !== project(object.name)) {
+  if (!projects[object.name]) {
     projects[object.name] = project(object.name);
   }
   updateProjectOptions(Object.keys(projects));
@@ -60,8 +61,8 @@ const toggleVisibilityButton = ({
 };
 
 const addTodoFormEventListener = () => {
-  const form = document.getElementById('input-todo');
-  form.addEventListener('submit', e => handleTodoForm(e));
+  const form = document.getElementById('input-task');
+  form.addEventListener('submit', e => handleTaskForm(e));
 };
 
 const addProjectFormEventListener = () => {
@@ -77,9 +78,9 @@ const addAllEventListeners = () => {
   addProjectFormEventListener();
 
   toggleVisibilityButton({
-    showBtnId: 'add-new-todo',
-    hideBtnId: 'hide-new-todo',
-    targetId: 'todo-form-container',
+    showBtnId: 'add-new-task',
+    hideBtnId: 'hide-new-task',
+    targetId: 'task-form-container',
   });
 
   toggleVisibilityButton({

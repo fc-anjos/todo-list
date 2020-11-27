@@ -1,5 +1,5 @@
 import styles from '../styles/input_todo.module.css';
-import { HideTodoFormBtn } from './buttons';
+import { HideTaskFormBtn } from './buttons';
 
 const projectOption = projectName => `
 <option value="${projectName}">${projectName}</option>
@@ -13,11 +13,11 @@ const updateProjectOptions = projectNames => {
   projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
 };
 
-const todoForm = () => `
-<div id="todo-form-container" class="${styles.inputTodo}">
+const taskForm = () => `
+<div id="task-form-container" class="${styles.inputTodo}">
   <h2>Add Todo</h2>
-  ${HideTodoFormBtn()}
-  <form id="input-todo">
+  ${HideTaskFormBtn()}
+  <form id="input-task">
     <div>
       <label for="title">Title</label>
       <input type="text" id="title" name="title">
@@ -44,4 +44,4 @@ const todoForm = () => `
 </form>`;
 
 
-export { todoForm, updateProjectOptions };
+export { taskForm, updateProjectOptions };

@@ -103,9 +103,9 @@ __webpack_require__.r(__webpack_exports__);
   \***********************************/
 /*! namespace exports */
 /*! export HideProjectFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export HideTodoFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export HideTaskFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
 /*! export ShowProjectFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export ShowTodoFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export ShowTaskFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
@@ -113,15 +113,15 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ShowProjectFormBtn": () => /* binding */ ShowProjectFormBtn,
-/* harmony export */   "ShowTodoFormBtn": () => /* binding */ ShowTodoFormBtn,
-/* harmony export */   "HideTodoFormBtn": () => /* binding */ HideTodoFormBtn,
+/* harmony export */   "ShowTaskFormBtn": () => /* binding */ ShowTaskFormBtn,
+/* harmony export */   "HideTaskFormBtn": () => /* binding */ HideTaskFormBtn,
 /* harmony export */   "HideProjectFormBtn": () => /* binding */ HideProjectFormBtn
 /* harmony export */ });
 /* harmony import */ var _styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/buttons.module.css */ "./src/styles/buttons.module.css");
 ;
 
-const ShowTodoFormBtn = () => `
-  <button id="add-new-todo" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.add}">Add new Todo</button>
+const ShowTaskFormBtn = () => `
+  <button id="add-new-task" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.add}">Add new Task</button>
 `;
 
 const ShowProjectFormBtn = () => `
@@ -132,73 +132,9 @@ const HideProjectFormBtn = () => `
   <button id="hide-new-project" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.hide}">X</button>
 `;
 
-const HideTodoFormBtn = () => `
-  <button id="hide-new-todo" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.hide}">X</button>
+const HideTaskFormBtn = () => `
+  <button id="hide-new-task" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.hide}">X</button>
 `;
-
-
-
-
-/***/ }),
-
-/***/ "./src/components/input_todo.js":
-/*!**************************************!*\
-  !*** ./src/components/input_todo.js ***!
-  \**************************************/
-/*! namespace exports */
-/*! export todoForm [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export updateProjectOptions [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "todoForm": () => /* binding */ todoForm,
-/* harmony export */   "updateProjectOptions": () => /* binding */ updateProjectOptions
-/* harmony export */ });
-/* harmony import */ var _styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/input_todo.module.css */ "./src/styles/input_todo.module.css");
-;
-
-const projectOption = projectName => `
-<option value="${projectName}">${projectName}</option>
-`;
-
-const projectOptions = (accumulator,
-  projectName) => accumulator + projectOption(projectName);
-
-const updateProjectOptions = projectNames => {
-  const projectSelect = document.getElementById('project-select');
-  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
-};
-
-const todoForm = () => `
-<h2>Add Todo</h2>
-<form id="input-todo" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
-  <div>
-    <label for="title">Title</label>
-    <input type="text" id="title" name="title">
-  </div>
-
-  <div>
-    <label for="description">Description</label>
-    <input type="text" id="description" name="description">
-  </div>
-
-  <div>
-    <label for="priority">Priority</label>
-    <input type="number" id="number" name="priority">
-  </div>
-
-  <div>
-    <label for="project">Project</label>
-    <select name="project" id="project-select">
-    </select>
-  </div>
-
-  <input type="submit" value="Submit">
-</form>`;
-
 
 
 
@@ -245,9 +181,9 @@ const projectForm = () => `
 
 /***/ }),
 
-/***/ "./src/components/todo-container.js":
+/***/ "./src/components/task-container.js":
 /*!******************************************!*\
-  !*** ./src/components/todo-container.js ***!
+  !*** ./src/components/task-container.js ***!
   \******************************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
@@ -262,87 +198,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_container_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/todo_container.module.css */ "./src/styles/todo_container.module.css");
 ;
 
-const todoContainer = () => `
+const taskContainer = () => `
   <div id="todo-container" class="${_styles_todo_container_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}"></div>
 `;
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (todoContainer);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (taskContainer);
 
 
 /***/ }),
 
-/***/ "./src/components/todo-form.js":
-/*!*************************************!*\
-  !*** ./src/components/todo-form.js ***!
-  \*************************************/
-/*! namespace exports */
-/*! export todoForm [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export updateProjectOptions [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "todoForm": () => /* binding */ todoForm,
-/* harmony export */   "updateProjectOptions": () => /* binding */ updateProjectOptions
-/* harmony export */ });
-/* harmony import */ var _styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/input_todo.module.css */ "./src/styles/input_todo.module.css");
-/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
-;
-
-
-const projectOption = projectName => `
-<option value="${projectName}">${projectName}</option>
-`;
-
-const projectOptions = (accumulator,
-  projectName) => accumulator + projectOption(projectName);
-
-const updateProjectOptions = projectNames => {
-  const projectSelect = document.getElementById('project-select');
-  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
-};
-
-const todoForm = () => `
-<div id="todo-form-container" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
-  <h2>Add Todo</h2>
-  ${(0,_buttons__WEBPACK_IMPORTED_MODULE_1__.HideTodoFormBtn)()}
-  <form id="input-todo">
-    <div>
-      <label for="title">Title</label>
-      <input type="text" id="title" name="title">
-    </div>
-
-    <div>
-      <label for="description">Description</label>
-      <input type="text" id="description" name="description">
-    </div>
-
-    <div>
-      <label for="priority">Priority</label>
-      <input type="number" id="number" name="priority">
-    </div>
-
-    <div>
-      <label for="project">Project</label>
-      <select name="project" id="project-select">
-      </select>
-    </div>
-
-    <input type="submit" value="Submit">
-  </div>
-</form>`;
-
-
-
-
-
-/***/ }),
-
-/***/ "./src/components/todo_element.js":
+/***/ "./src/components/task-element.js":
 /*!****************************************!*\
-  !*** ./src/components/todo_element.js ***!
+  !*** ./src/components/task-element.js ***!
   \****************************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
@@ -377,29 +244,98 @@ const todoElement = todo => {
 
 
 const projectToTag = project => {
-  const title = project[0];
-  const content = project[1];
+  const title = project[1].name;
+  const content = project[1].tasks;
   const isEmpty = content.length === 0;
   const genTags = (title, content) => title + content.map(todoElement).join('');
 
   if (isEmpty) {
     return `
-    <div>
-      Project ${title} has no todos
-    </div>
-    `;
+     <div>
+       Project ${title} has no todos
+     </div>
+     `;
   }
   return genTags(title, content);
 };
 
 const drawTodos = projects => {
-  const projectsEntries = Object.entries(projects);
-  const projectTags = projectsEntries.map(projectToTag).join('');
+  const projectEntries = Object.entries(projects);
+  const projectTags = projectEntries.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (drawTodos);
+
+
+/***/ }),
+
+/***/ "./src/components/task-form.js":
+/*!*************************************!*\
+  !*** ./src/components/task-form.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! export taskForm [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export updateProjectOptions [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "taskForm": () => /* binding */ taskForm,
+/* harmony export */   "updateProjectOptions": () => /* binding */ updateProjectOptions
+/* harmony export */ });
+/* harmony import */ var _styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/input_todo.module.css */ "./src/styles/input_todo.module.css");
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
+;
+
+
+const projectOption = projectName => `
+<option value="${projectName}">${projectName}</option>
+`;
+
+const projectOptions = (accumulator,
+  projectName) => accumulator + projectOption(projectName);
+
+const updateProjectOptions = projectNames => {
+  const projectSelect = document.getElementById('project-select');
+  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
+};
+
+const taskForm = () => `
+<div id="task-form-container" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
+  <h2>Add Todo</h2>
+  ${(0,_buttons__WEBPACK_IMPORTED_MODULE_1__.HideTaskFormBtn)()}
+  <form id="input-task">
+    <div>
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title">
+    </div>
+
+    <div>
+      <label for="description">Description</label>
+      <input type="text" id="description" name="description">
+    </div>
+
+    <div>
+      <label for="priority">Priority</label>
+      <input type="number" id="number" name="priority">
+    </div>
+
+    <div>
+      <label for="project">Project</label>
+      <select name="project" id="project-select">
+      </select>
+    </div>
+
+    <input type="submit" value="Submit">
+  </div>
+</form>`;
+
+
+
 
 
 /***/ }),
@@ -414,10 +350,10 @@ const drawTodos = projects => {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_todo_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/todo-form */ "./src/components/todo-form.js");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/task-form */ "./src/components/task-form.js");
 /* harmony import */ var _components_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/buttons */ "./src/components/buttons.js");
 /* harmony import */ var _components_project_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/project-form */ "./src/components/project-form.js");
-/* harmony import */ var _components_todo_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/todo-container */ "./src/components/todo-container.js");
+/* harmony import */ var _components_task_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/task-container */ "./src/components/task-container.js");
 /* harmony import */ var _utils_event_listeners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/event-listeners */ "./src/utils/event-listeners.js");
 ;
 
@@ -426,11 +362,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const home = () => `
-  ${(0,_components_todo_form__WEBPACK_IMPORTED_MODULE_0__.todoForm)()}
+  ${(0,_components_task_form__WEBPACK_IMPORTED_MODULE_0__.taskForm)()}
   ${(0,_components_project_form__WEBPACK_IMPORTED_MODULE_2__.default)()}
   ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_1__.ShowProjectFormBtn)()}
-  ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_1__.ShowTodoFormBtn)()}
-  ${(0,_components_todo_container__WEBPACK_IMPORTED_MODULE_3__.default)()}
+  ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_1__.ShowTaskFormBtn)()}
+  ${(0,_components_task_container__WEBPACK_IMPORTED_MODULE_3__.default)()}
 `;
 
 const drawHome = () => {
@@ -446,9 +382,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
 /***/ }),
 
-/***/ "./src/todo.js":
+/***/ "./src/project.js":
+/*!************************!*\
+  !*** ./src/project.js ***!
+  \************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+const project = name => {
+  const tasks = [];
+  const appendTask = task => tasks.push(task);
+  return { name, tasks, appendTask };
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (project);
+
+
+/***/ }),
+
+/***/ "./src/task.js":
 /*!*********************!*\
-  !*** ./src/todo.js ***!
+  !*** ./src/task.js ***!
   \*********************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
@@ -460,7 +421,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-const todo = object => {
+const task = object => {
   const {
     title,
     description,
@@ -473,7 +434,7 @@ const todo = object => {
   };
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (todo);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (task);
 
 
 /***/ }),
@@ -492,16 +453,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var _todo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../todo */ "./src/todo.js");
-/* harmony import */ var _components_todo_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/todo_element */ "./src/components/todo_element.js");
-/* harmony import */ var _components_input_todo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/input_todo */ "./src/components/input_todo.js");
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../task */ "./src/task.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../project */ "./src/project.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
 ;
 
 
 
 
-const projects = { default: [] };
-
+const projects = {};
 const showEl = targetID => {
   const el = document.getElementById(targetID);
   el.style.display = 'block';
@@ -512,15 +473,15 @@ const hideEl = targetID => {
   el.style.display = 'none';
 };
 
-const handleTodoForm = e => {
+const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
-  const object = Object.fromEntries(formData);
-  const newTodo = (0,_todo__WEBPACK_IMPORTED_MODULE_0__.default)(object);
-  projects[object.project].push(newTodo);
-  hideEl('todo-form-container');
-  showEl('add-new-todo');
-  (0,_components_todo_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  const taskInfo = Object.fromEntries(formData);
+  const newTodo = (0,_task__WEBPACK_IMPORTED_MODULE_0__.default)(taskInfo);
+  projects[taskInfo.project].appendTask(newTodo);
+  hideEl('task-form-container');
+  showEl('add-new-task');
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(projects);
   e.target.reset();
 };
 
@@ -528,13 +489,13 @@ const handleProjectForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
-  if (projects[object.name] !== []) {
-    projects[object.name] = [];
+  if (!projects[object.name]) {
+    projects[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_1__.default)(object.name);
   }
-  (0,_components_input_todo__WEBPACK_IMPORTED_MODULE_2__.updateProjectOptions)(Object.keys(projects));
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(projects));
   hideEl('project-form-container');
   showEl('add-new-project');
-  (0,_components_todo_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(projects);
   e.target.reset();
 };
 
@@ -559,8 +520,8 @@ const toggleVisibilityButton = ({
 };
 
 const addTodoFormEventListener = () => {
-  const form = document.getElementById('input-todo');
-  form.addEventListener('submit', e => handleTodoForm(e));
+  const form = document.getElementById('input-task');
+  form.addEventListener('submit', e => handleTaskForm(e));
 };
 
 const addProjectFormEventListener = () => {
@@ -569,16 +530,16 @@ const addProjectFormEventListener = () => {
 };
 
 const addAllEventListeners = () => {
-  (0,_components_input_todo__WEBPACK_IMPORTED_MODULE_2__.updateProjectOptions)(Object.keys(projects));
-  (0,_components_todo_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(projects));
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(projects);
 
   addTodoFormEventListener();
   addProjectFormEventListener();
 
   toggleVisibilityButton({
-    showBtnId: 'add-new-todo',
-    hideBtnId: 'hide-new-todo',
-    targetId: 'todo-form-container',
+    showBtnId: 'add-new-task',
+    hideBtnId: 'hide-new-task',
+    targetId: 'task-form-container',
   });
 
   toggleVisibilityButton({

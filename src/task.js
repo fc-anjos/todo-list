@@ -1,4 +1,4 @@
-const todo = object => {
+const task = object => {
   const {
     title,
     description,
@@ -11,4 +11,4 @@ const todo = object => {
   };
 };
 
-export default todo;
+export default task;

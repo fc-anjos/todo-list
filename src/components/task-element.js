@@ -20,8 +20,8 @@ const todoElement = todo => {
 
 
 const projectToTag = project => {
-  const title = project[0];
-  const content = project[1];
+  const title = project[1].name;
+  const content = project[1].tasks;
   const isEmpty = content.length === 0;
   const genTags = (title, content) => title + content.map(todoElement).join('');
 

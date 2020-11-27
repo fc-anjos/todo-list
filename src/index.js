@@ -1,18 +1,18 @@
-import { todoForm } from './components/todo-form';
+import { taskForm } from './components/task-form';
 import {
-  ShowTodoFormBtn,
+  ShowTaskFormBtn,
   ShowProjectFormBtn,
 } from './components/buttons';
 import projectForm from './components/project-form';
-import todoContainer from './components/todo-container';
+import taskContainer from './components/task-container';
 import addAllEventListeners from './utils/event-listeners';
 
 const home = () => `
-  ${todoForm()}
+  ${taskForm()}
   ${projectForm()}
   ${ShowProjectFormBtn()}
-  ${ShowTodoFormBtn()}
-  ${todoContainer()}
+  ${ShowTaskFormBtn()}
+  ${taskContainer()}
 `;
 
 const drawHome = () => {
