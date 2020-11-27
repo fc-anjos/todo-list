@@ -15,7 +15,7 @@ const updateProjectOptions = projectNames => {
 
 const taskForm = () => `
 <div id="task-form-container" class="${styles.inputTodo}">
-  <h2>Add Todo</h2>
+  <h2>Add Task</h2>
   ${HideTaskFormBtn()}
   <form id="input-task">
     <div>

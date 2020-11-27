@@ -3,16 +3,7 @@ import project from '../project';
 import projects from '../projects';
 import drawTodos from '../components/task-element';
 import { updateProjectOptions } from '../components/task-form';
-
-const showEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'block';
-};
-
-const hideEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'none';
-};
+import { hideEl, showEl, toggleVisibilityButton } from './show-hide';
 
 const handleTaskForm = e => {
   e.preventDefault();
@@ -40,26 +31,6 @@ const handleProjectForm = e => {
   e.target.reset();
 };
 
-const toggleVisibilityButton = ({
-  showBtnId,
-  hideBtnId,
-  targetId,
-}) => {
-  const showBtn = document.getElementById(showBtnId);
-  showBtn.addEventListener('click', () => {
-    showEl(targetId);
-    showEl(hideBtnId);
-    hideEl(showBtnId);
-  });
-
-  const hideBtn = document.getElementById(hideBtnId);
-  hideBtn.addEventListener('click', () => {
-    hideEl(targetId);
-    hideEl(hideBtnId);
-    showEl(showBtnId);
-  });
-};
-
 const addTodoFormEventListener = () => {
   const form = document.getElementById('input-task');
   form.addEventListener('submit', e => handleTaskForm(e));
@@ -73,7 +44,6 @@ const addProjectFormEventListener = () => {
 const addAllEventListeners = () => {
   updateProjectOptions(Object.keys(projects));
   drawTodos(projects);
-
   addTodoFormEventListener();
   addProjectFormEventListener();
 
