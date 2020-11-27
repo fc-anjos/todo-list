@@ -1,9 +1,9 @@
 import task from '../task';
 import project from '../project';
+import projects from '../projects';
 import drawTodos from '../components/task-element';
 import { updateProjectOptions } from '../components/task-form';
 
-const projects = {};
 const showEl = targetID => {
   const el = document.getElementById(targetID);
   el.style.display = 'block';

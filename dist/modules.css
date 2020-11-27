@@ -16,8 +16,13 @@
   display: none;
 }
 
-.src-styles-todo_container-module__todoContainer--30VKB {
+.src-styles-task-container-module__todoContainer--tdFBI {
 
+}
+
+.src-styles-task-container-module__header--ew3UO {
+  display: flex;
+  justify-content: space-between;
 }
 
 .src-styles-todo_element-module__todoContainer--1wDP9 {
