@@ -5,13 +5,26 @@ import { updateProjectOptions } from '../components/input_todo';
 
 const projects = { default: [] };
 
+const showEl = targetID => {
+  const el = document.getElementById(targetID);
+  el.style.display = 'block';
+};
+
+const hideEl = targetID => {
+  const el = document.getElementById(targetID);
+  el.style.display = 'none';
+};
+
 const handleTodoForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
   const newTodo = todo(object);
   projects[object.project].push(newTodo);
+  hideEl('todo-form-container');
+  showEl('add-new-todo');
   drawTodos(projects);
+  e.target.reset();
 };
 
 const handleProjectForm = e => {
@@ -22,17 +35,10 @@ const handleProjectForm = e => {
     projects[object.name] = [];
   }
   updateProjectOptions(Object.keys(projects));
+  hideEl('project-form-container');
+  showEl('add-new-project');
   drawTodos(projects);
-};
-
-const showEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'block';
-};
-
-const hideEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'none';
+  e.target.reset();
 };
 
 const toggleVisibilityButton = ({

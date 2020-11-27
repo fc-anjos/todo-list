@@ -26,7 +26,11 @@ const projectToTag = project => {
   const genTags = (title, content) => title + content.map(todoElement).join('');
 
   if (isEmpty) {
-    return `Project ${title} has no tagas`;
+    return `
+    <div>
+      Project ${title} has no todos
+    </div>
+    `;
   }
   return genTags(title, content);
 };
