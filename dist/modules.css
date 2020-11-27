@@ -1,3 +1,19 @@
+.src-styles-index-module__main--_xvwR {
+  margin: 0 auto;
+  flex: 0 0 80%;
+  background-color: rgba(255, 0, 255, 0.1);
+}
+
+.src-styles-index-module__sidebar--2B4Xv {
+  background-color: rgba(0, 255, 255, 0.2);
+  flex: 0 0 20%;
+}
+
+.src-styles-index-module__container--OSMII {
+  margin: 0 auto;
+  display: flex;
+}
+
 .src-styles-input_todo-module__inputTodo--2ljbb {
   display: none;
 }
@@ -9,10 +25,6 @@
 }
 
 .src-styles-buttons-module__hide--2ZNuR {
-  display: none;
-}
-
-.src-styles-input_project-module__inputProject--1M_VC {
   display: none;
 }
 
@@ -32,4 +44,8 @@
 }
 
 
+
+.src-styles-input_project-module__inputProject--1M_VC {
+  display: none;
+}
 

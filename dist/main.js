@@ -21,6 +21,25 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/styles/index.module.css":
+/*!*************************************!*\
+  !*** ./src/styles/index.module.css ***!
+  \*************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"main":"src-styles-index-module__main--_xvwR","sidebar":"src-styles-index-module__sidebar--2B4Xv","container":"src-styles-index-module__container--OSMII"});
+
+/***/ }),
+
 /***/ "./src/styles/input_project.module.css":
 /*!*********************************************!*\
   !*** ./src/styles/input_project.module.css ***!
@@ -141,6 +160,29 @@ const HideTaskFormBtn = () => `
 
 /***/ }),
 
+/***/ "./src/components/header.js":
+/*!**********************************!*\
+  !*** ./src/components/header.js ***!
+  \**********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+const header = () => `
+<h1>What next?</h1>
+`;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
+
+
+/***/ }),
+
 /***/ "./src/components/project-form.js":
 /*!****************************************!*\
   !*** ./src/components/project-form.js ***!
@@ -177,6 +219,36 @@ const projectForm = () => `
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projectForm);
+
+
+/***/ }),
+
+/***/ "./src/components/project-side-bar.js":
+/*!********************************************!*\
+  !*** ./src/components/project-side-bar.js ***!
+  \********************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
+/* harmony import */ var _project_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project-form */ "./src/components/project-form.js");
+;
+
+
+const projectSideBar = () => `
+  <div>'project-side-bar.js'</div>
+  ${(0,_project_form__WEBPACK_IMPORTED_MODULE_1__.default)()}
+  ${(0,_buttons__WEBPACK_IMPORTED_MODULE_0__.ShowProjectFormBtn)()}
+`;
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projectSideBar);
 
 
 /***/ }),
@@ -312,7 +384,7 @@ const updateProjectOptions = projectNames => {
 
 const taskForm = () => `
 <div id="task-form-container" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
-  <h2>Add Todo</h2>
+  <h2>Add Task</h2>
   ${(0,_buttons__WEBPACK_IMPORTED_MODULE_1__.HideTaskFormBtn)()}
   <form id="input-task">
     <div>
@@ -356,23 +428,33 @@ const taskForm = () => `
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/task-form */ "./src/components/task-form.js");
-/* harmony import */ var _components_buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/buttons */ "./src/components/buttons.js");
-/* harmony import */ var _components_project_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/project-form */ "./src/components/project-form.js");
+/* harmony import */ var _styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.module.css */ "./src/styles/index.module.css");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/task-form */ "./src/components/task-form.js");
+/* harmony import */ var _components_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/buttons */ "./src/components/buttons.js");
 /* harmony import */ var _components_task_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/task-container */ "./src/components/task-container.js");
 /* harmony import */ var _utils_event_listeners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/event-listeners */ "./src/utils/event-listeners.js");
+/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header */ "./src/components/header.js");
+/* harmony import */ var _components_project_side_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/project-side-bar */ "./src/components/project-side-bar.js");
 ;
 
 
 
 
 
+
+
 const home = () => `
-  ${(0,_components_task_form__WEBPACK_IMPORTED_MODULE_0__.taskForm)()}
-  ${(0,_components_project_form__WEBPACK_IMPORTED_MODULE_2__.default)()}
-  ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_1__.ShowProjectFormBtn)()}
-  ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_1__.ShowTaskFormBtn)()}
-  ${(0,_components_task_container__WEBPACK_IMPORTED_MODULE_3__.default)()}
+  <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.container}>
+    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.sidebar}>
+      ${(0,_components_project_side_bar__WEBPACK_IMPORTED_MODULE_6__.default)()}
+    </div>
+    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.main}>
+      ${(0,_components_header__WEBPACK_IMPORTED_MODULE_5__.default)()}
+      ${(0,_components_task_container__WEBPACK_IMPORTED_MODULE_3__.default)()}
+      ${(0,_components_task_form__WEBPACK_IMPORTED_MODULE_1__.taskForm)()}
+      ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_2__.ShowTaskFormBtn)()}
+    </div>
+  </div>
 `;
 
 const drawHome = () => {
@@ -489,21 +571,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../projects */ "./src/projects.js");
 /* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
 /* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
+/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
 ;
 
 
 
 
 
-const showEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'block';
-};
-
-const hideEl = targetID => {
-  const el = document.getElementById(targetID);
-  el.style.display = 'none';
-};
 
 const handleTaskForm = e => {
   e.preventDefault();
@@ -511,8 +585,8 @@ const handleTaskForm = e => {
   const taskInfo = Object.fromEntries(formData);
   const newTodo = (0,_task__WEBPACK_IMPORTED_MODULE_0__.default)(taskInfo);
   _projects__WEBPACK_IMPORTED_MODULE_2__.default[taskInfo.project].appendTask(newTodo);
-  hideEl('task-form-container');
-  showEl('add-new-task');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.hideEl)('task-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.showEl)('add-new-task');
   (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
   e.target.reset();
 };
@@ -525,10 +599,72 @@ const handleProjectForm = e => {
     _projects__WEBPACK_IMPORTED_MODULE_2__.default[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_1__.default)(object.name);
   }
   (0,_components_task_form__WEBPACK_IMPORTED_MODULE_4__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_2__.default));
-  hideEl('project-form-container');
-  showEl('add-new-project');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.hideEl)('project-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.showEl)('add-new-project');
   (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
   e.target.reset();
+};
+
+const addTodoFormEventListener = () => {
+  const form = document.getElementById('input-task');
+  form.addEventListener('submit', e => handleTaskForm(e));
+};
+
+const addProjectFormEventListener = () => {
+  const form = document.getElementById('input-project');
+  form.addEventListener('submit', e => handleProjectForm(e));
+};
+
+const addAllEventListeners = () => {
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_4__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_2__.default));
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
+  addTodoFormEventListener();
+  addProjectFormEventListener();
+
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.toggleVisibilityButton)({
+    showBtnId: 'add-new-task',
+    hideBtnId: 'hide-new-task',
+    targetId: 'task-form-container',
+  });
+
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.toggleVisibilityButton)({
+    showBtnId: 'add-new-project',
+    hideBtnId: 'hide-new-project',
+    targetId: 'project-form-container',
+  });
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addAllEventListeners);
+
+
+/***/ }),
+
+/***/ "./src/utils/show-hide.js":
+/*!********************************!*\
+  !*** ./src/utils/show-hide.js ***!
+  \********************************/
+/*! namespace exports */
+/*! export hideEl [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export showEl [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export toggleVisibilityButton [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "showEl": () => /* binding */ showEl,
+/* harmony export */   "hideEl": () => /* binding */ hideEl,
+/* harmony export */   "toggleVisibilityButton": () => /* binding */ toggleVisibilityButton
+/* harmony export */ });
+const showEl = targetID => {
+  const el = document.getElementById(targetID);
+  el.style.display = 'block';
+};
+
+const hideEl = targetID => {
+  const el = document.getElementById(targetID);
+  el.style.display = 'none';
 };
 
 const toggleVisibilityButton = ({
@@ -551,37 +687,7 @@ const toggleVisibilityButton = ({
   });
 };
 
-const addTodoFormEventListener = () => {
-  const form = document.getElementById('input-task');
-  form.addEventListener('submit', e => handleTaskForm(e));
-};
 
-const addProjectFormEventListener = () => {
-  const form = document.getElementById('input-project');
-  form.addEventListener('submit', e => handleProjectForm(e));
-};
-
-const addAllEventListeners = () => {
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_4__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_2__.default));
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
-
-  addTodoFormEventListener();
-  addProjectFormEventListener();
-
-  toggleVisibilityButton({
-    showBtnId: 'add-new-task',
-    hideBtnId: 'hide-new-task',
-    targetId: 'task-form-container',
-  });
-
-  toggleVisibilityButton({
-    showBtnId: 'add-new-project',
-    hideBtnId: 'hide-new-project',
-    targetId: 'project-form-container',
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addAllEventListeners);
 
 
 /***/ })
