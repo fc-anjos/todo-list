@@ -1,9 +1,8 @@
 import todo from '../todo';
+import project from '../project';
+import projects from '../projects';
 import drawTodos from '../components/todo_element';
-import { updateProjectOptions } from '../components/input_todo';
-
-
-const projects = { default: [] };
+import { updateProjectOptions } from '../components/todo-form';
 
 const showEl = targetID => {
   const el = document.getElementById(targetID);
@@ -31,8 +30,8 @@ const handleProjectForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
-  if (projects[object.name] !== []) {
-    projects[object.name] = [];
+  if (projects[object.name] !== project(object.name)) {
+    projects[object.name] = project(object.name);
   }
   updateProjectOptions(Object.keys(projects));
   hideEl('project-form-container');

@@ -27,17 +27,17 @@ const projectToTag = project => {
 
   if (isEmpty) {
     return `
-    <div>
-      Project ${title} has no todos
-    </div>
-    `;
+     <div>
+       Project ${title} has no todos
+     </div>
+     `;
   }
   return genTags(title, content);
 };
 
 const drawTodos = projects => {
-  const projectsEntries = Object.entries(projects);
-  const projectTags = projectsEntries.map(projectToTag).join('');
+  const projectEntries = Object.entries(projects);
+  const projectTags = projectEntries.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };
