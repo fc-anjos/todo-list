@@ -8,11 +8,6 @@ const hideEl = targetID => {
   el.style.display = 'none';
 };
 
-const toggleEl = id => {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === 'none' ? 'block' : 'none';
-};
-
 const toggleVisibilityButton = ({
   showBtnId,
   hideBtnId,
@@ -33,6 +28,4 @@ const toggleVisibilityButton = ({
   });
 };
 
-export {
-  showEl, hideEl, toggleEl, toggleVisibilityButton,
-};
+export { showEl, hideEl, toggleVisibilityButton };

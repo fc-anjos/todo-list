@@ -18,12 +18,13 @@ const home = () => `
       ${toggleProjectSideBarButton()}
     </div>
 
-
     <div class=${styles.main}>
       ${header()}
-      ${taskContainer()}
-      ${taskForm()}
-      ${ShowTaskFormBtn()}
+      <div class=${styles.tasksInner}>
+        ${taskContainer()}
+        ${taskForm()}
+        ${ShowTaskFormBtn()}
+      </div>
     </div>
 
   </div>

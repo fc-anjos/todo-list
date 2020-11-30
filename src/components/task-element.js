@@ -28,7 +28,9 @@ const projectToTag = project => {
   if (isEmpty) {
     return `
      <div>
-       Project ${title} has no todos
+       <i>
+         Project ${title} has no todos
+       </i>
      </div>
      `;
   }

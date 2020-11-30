@@ -13,6 +13,10 @@
   background-color: rgba(255, 0, 255, 0.1);
 }
 
+.tasksInner {
+  margin: 60px;
+}
+
 .sidebar {
   background-color: rgba(0, 255, 255, 0.2);
   flex: 0 0 20%;

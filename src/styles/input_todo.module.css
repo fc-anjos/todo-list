@@ -1,5 +1,21 @@
 .inputTodo {
   display: none;
+  margin-top: 0.4em;
 }
 
+.form {
+  width: 100%;
+  position: relative;
+  top: 1.4em;
+}
 
+.label {
+  position: absolute;
+  top: -1.4em;
+}
+
+.formFields {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
