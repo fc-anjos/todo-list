@@ -3,7 +3,13 @@ import project from '../project';
 import projects from '../projects';
 import drawTodos from '../components/task-element';
 import { updateProjectOptions } from '../components/task-form';
-import { hideEl, showEl, toggleVisibilityButton } from './show-hide';
+import {
+  hideEl, showEl, toggleVisibilityButton, toggleEl,
+} from './show-hide';
+
+const toggleProjectSideBar = e => {
+  toggleEl('project-side-bar');
+};
 
 const handleTaskForm = e => {
   e.preventDefault();
@@ -31,6 +37,11 @@ const handleProjectForm = e => {
   e.target.reset();
 };
 
+const addToggleProjectSideBarEventListener = () => {
+  const btn = document.getElementById('collapse-project');
+  btn.addEventListener('click', e => toggleProjectSideBar(e));
+};
+
 const addTodoFormEventListener = () => {
   const form = document.getElementById('input-task');
   form.addEventListener('submit', e => handleTaskForm(e));
@@ -46,6 +57,7 @@ const addAllEventListeners = () => {
   drawTodos(projects);
   addTodoFormEventListener();
   addProjectFormEventListener();
+  addToggleProjectSideBarEventListener();
 
   toggleVisibilityButton({
     showBtnId: 'add-new-task',

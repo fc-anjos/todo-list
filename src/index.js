@@ -5,18 +5,27 @@ import taskContainer from './components/task-container';
 import addAllEventListeners from './utils/event-listeners';
 import header from './components/header';
 import projectSideBar from './components/project-side-bar';
+import toggleProjectSideBarButton from './components/toggle-project-sidebar-button';
 
 const home = () => `
   <div class=${styles.container}>
-    <div class=${styles.sidebar}>
+
+    <div class=${styles.sidebar} id="project-side-bar">
       ${projectSideBar()}
     </div>
+
+    <div class=${styles.toggleSidebarContainer}>
+      ${toggleProjectSideBarButton()}
+    </div>
+
+
     <div class=${styles.main}>
       ${header()}
       ${taskContainer()}
       ${taskForm()}
       ${ShowTaskFormBtn()}
     </div>
+
   </div>
 `;
 

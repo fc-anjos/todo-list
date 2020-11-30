@@ -2,9 +2,9 @@ import { ShowProjectFormBtn } from './buttons';
 import projectForm from './project-form';
 
 const projectSideBar = () => `
-  <div>'project-side-bar.js'</div>
-  ${projectForm()}
-  ${ShowProjectFormBtn()}
+    <h2>Projects</h2>
+    ${projectForm()}
+    ${ShowProjectFormBtn()}
 `;
 
 export default projectSideBar;
