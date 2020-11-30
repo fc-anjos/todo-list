@@ -1,3 +1,8 @@
+const toggleEl = id => {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === 'block' ? 'none' : 'block';
+};
+
 const showEl = targetID => {
   const el = document.getElementById(targetID);
   el.style.display = 'block';
@@ -28,4 +33,6 @@ const toggleVisibilityButton = ({
   });
 };
 
-export { showEl, hideEl, toggleVisibilityButton };
+export {
+  showEl, hideEl, toggleEl, toggleVisibilityButton,
+};
