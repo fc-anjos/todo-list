@@ -1,4 +1,3 @@
-import { format } from 'date-fns';
 import styles from '../styles/todo_element.module.css';
 
 const todoElement = todo => {
@@ -10,13 +9,17 @@ const todoElement = todo => {
     dueDate,
   } = todo;
 
+  const year = dueDate.getUTCFullYear();
+  const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
+  const day = dueDate.getUTCDate();
   return `
+    <i class="fa fa-camera-retro"></i>
     <div class="${styles.todoContainer}">
       <div class="test">${title}</div>
       <div>${description}</div>
       <div>${priority}</div>
       <div>${project}</div>
-      <div>${format(dueDate, 'yyyy-MM-dd')}</div>
+      <div>${year}-${month}-${day}</div>
     </div>
     `;
 };

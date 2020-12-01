@@ -7,6 +7,11 @@ import header from './components/header';
 import projectSideBar from './components/project-side-bar';
 import toggleProjectSideBarButton from './components/toggle-project-sidebar-button';
 
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
+
 const home = () => `
   <div class=${styles.container}>
 
