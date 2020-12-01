@@ -28,8 +28,8 @@ const todoElement = todo => {
 };
 
 const projectToTag = project => {
-  const title = project[1].name;
-  const content = project[1].tasks;
+  const title = project.name;
+  const content = project.tasks;
   const isEmpty = content.length === 0;
   const genTags = (title, content) => title + content.map(todoElement).join('');
 
@@ -46,8 +46,7 @@ const projectToTag = project => {
 };
 
 const drawTodos = projects => {
-  const projectEntries = Object.entries(projects);
-  const projectTags = projectEntries.map(projectToTag).join('');
+  const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };

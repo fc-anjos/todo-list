@@ -4947,8 +4947,8 @@ const todoElement = todo => {
 };
 
 const projectToTag = project => {
-  const title = project[1].name;
-  const content = project[1].tasks;
+  const title = project.name;
+  const content = project.tasks;
   const isEmpty = content.length === 0;
   const genTags = (title, content) => title + content.map(todoElement).join('');
 
@@ -4965,8 +4965,7 @@ const projectToTag = project => {
 };
 
 const drawTodos = projects => {
-  const projectEntries = Object.entries(projects);
-  const projectTags = projectEntries.map(projectToTag).join('');
+  const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };
@@ -4998,14 +4997,15 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 
-const projectOption = projectName => `
-<option value="${projectName}">${projectName}</option>
+const projectOption = project => `
+    <option value="${project.index}">${project.name}</option>
 `;
 
 const projectOptions = (accumulator,
   projectName) => accumulator + projectOption(projectName);
 
-const updateProjectOptions = projectNames => {
+const updateProjectOptions = projects => {
+  const projectNames = projects.map((project, index) => ({ index, name: project.name }));
   const projectSelect = document.getElementById('project-select');
   projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
 };
@@ -5032,8 +5032,8 @@ const taskForm = () => `
       </div>
 
       <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="project">Project</label>
-        <select name="project" id="project-select">
+        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="projectIndex">Project</label>
+        <select name="projectIndex" id="project-select">
         </select>
       </div>
 
@@ -5177,7 +5177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const project = name => {
   const tasks = [];
-  const createTask = object => tasks.push((0,_task__WEBPACK_IMPORTED_MODULE_0__.default)(object));
+  const createTask = object => tasks.push((0,_task__WEBPACK_IMPORTED_MODULE_0__.default)({ ...object, project: name }));
   return { name, tasks, createTask };
 };
 
@@ -5205,17 +5205,17 @@ __webpack_require__.r(__webpack_exports__);
 ;
 
 const defaultTask = ({
-  title: 'First Task',
-  description: 'First Description',
-  priority: '0',
-  project: 'teste',
+  title: 'Default Task',
+  description: 'Default Description',
+  priority: '1',
+  project: 'Default Project',
   dateString: '2020-12-10',
 });
 
 const defaultProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)('default');
 
 defaultProject.createTask(defaultTask);
-const projects = { defaultProject };
+const projects = [defaultProject];
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projects);
 
@@ -5291,7 +5291,7 @@ const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  _projects__WEBPACK_IMPORTED_MODULE_1__.default[taskInfo.project].createTask(taskInfo);
+  _projects__WEBPACK_IMPORTED_MODULE_1__.default[taskInfo.projectIndex].createTask(taskInfo);
   (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('task-form-container');
   (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-task');
   (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
@@ -5305,7 +5305,7 @@ const handleProjectForm = e => {
   if (!_projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name]) {
     _projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
   }
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_1__.default));
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('project-form-container');
   (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-project');
   (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
@@ -5328,7 +5328,7 @@ const addProjectFormEventListener = () => {
 };
 
 const addAllEventListeners = () => {
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_1__.default));
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   addTodoFormEventListener();
   addProjectFormEventListener();

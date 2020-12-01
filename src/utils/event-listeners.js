@@ -14,7 +14,7 @@ const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  projects[taskInfo.project].createTask(taskInfo);
+  projects[taskInfo.projectIndex].createTask(taskInfo);
   hideEl('task-form-container');
   showEl('add-new-task');
   drawTodos(projects);
@@ -28,7 +28,7 @@ const handleProjectForm = e => {
   if (!projects[object.name]) {
     projects[object.name] = project(object.name);
   }
-  updateProjectOptions(Object.keys(projects));
+  updateProjectOptions(projects);
   hideEl('project-form-container');
   showEl('add-new-project');
   drawTodos(projects);
@@ -51,7 +51,7 @@ const addProjectFormEventListener = () => {
 };
 
 const addAllEventListeners = () => {
-  updateProjectOptions(Object.keys(projects));
+  updateProjectOptions(projects);
   drawTodos(projects);
   addTodoFormEventListener();
   addProjectFormEventListener();
