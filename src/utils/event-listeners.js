@@ -1,4 +1,3 @@
-import task from '../task';
 import project from '../project';
 import projects from '../projects';
 import drawTodos from '../components/task-element';
@@ -15,8 +14,7 @@ const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  const newTodo = task(taskInfo);
-  projects[taskInfo.project].appendTask(newTodo);
+  projects[taskInfo.project].createTask(taskInfo);
   hideEl('task-form-container');
   showEl('add-new-task');
   drawTodos(projects);

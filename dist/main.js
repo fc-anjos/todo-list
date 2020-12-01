@@ -5164,7 +5164,7 @@ window.addEventListener('DOMContentLoaded', () => {
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5172,10 +5172,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
+/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task */ "./src/task.js");
+;
+
 const project = name => {
   const tasks = [];
-  const appendTask = task => tasks.push(task);
-  return { name, tasks, appendTask };
+  const createTask = object => tasks.push((0,_task__WEBPACK_IMPORTED_MODULE_0__.default)(object));
+  return { name, tasks, createTask };
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (project);
@@ -5199,20 +5202,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task */ "./src/task.js");
 ;
 
-
-const defaultTask = (0,_task__WEBPACK_IMPORTED_MODULE_1__.default)({
+const defaultTask = ({
   title: 'First Task',
   description: 'First Description',
   priority: '0',
   project: 'teste',
-  dateString: '2020-12-28',
+  dateString: '2020-12-10',
 });
 
 const defaultProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)('default');
-defaultProject.appendTask(defaultTask);
+
+defaultProject.createTask(defaultTask);
 const projects = { defaultProject };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projects);
@@ -5270,32 +5272,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
-/* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../task */ "./src/task.js");
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../project */ "./src/project.js");
-/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../projects */ "./src/projects.js");
-/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
-/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
-/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project */ "./src/project.js");
+/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../projects */ "./src/projects.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
+/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
 ;
 
 
 
 
 
-
 const toggleProjectSideBar = () => {
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.toggleEl)('project-side-bar');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleEl)('project-side-bar');
 };
 
 const handleTaskForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  const newTodo = (0,_task__WEBPACK_IMPORTED_MODULE_0__.default)(taskInfo);
-  _projects__WEBPACK_IMPORTED_MODULE_2__.default[taskInfo.project].appendTask(newTodo);
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.hideEl)('task-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.showEl)('add-new-task');
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
+  _projects__WEBPACK_IMPORTED_MODULE_1__.default[taskInfo.project].createTask(taskInfo);
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('task-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-task');
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   e.target.reset();
 };
 
@@ -5303,13 +5302,13 @@ const handleProjectForm = e => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
-  if (!_projects__WEBPACK_IMPORTED_MODULE_2__.default[object.name]) {
-    _projects__WEBPACK_IMPORTED_MODULE_2__.default[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_1__.default)(object.name);
+  if (!_projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name]) {
+    _projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
   }
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_4__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_2__.default));
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.hideEl)('project-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.showEl)('add-new-project');
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_1__.default));
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('project-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-project');
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   e.target.reset();
 };
 
@@ -5329,19 +5328,19 @@ const addProjectFormEventListener = () => {
 };
 
 const addAllEventListeners = () => {
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_4__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_2__.default));
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_3__.default)(_projects__WEBPACK_IMPORTED_MODULE_2__.default);
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(Object.keys(_projects__WEBPACK_IMPORTED_MODULE_1__.default));
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
   addTodoFormEventListener();
   addProjectFormEventListener();
   addToggleProjectSideBarEventListener();
 
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.toggleVisibilityButton)({
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleVisibilityButton)({
     showBtnId: 'add-new-task',
     hideBtnId: 'hide-new-task',
     targetId: 'task-form-container',
   });
 
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_5__.toggleVisibilityButton)({
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleVisibilityButton)({
     showBtnId: 'add-new-project',
     hideBtnId: 'hide-new-project',
     targetId: 'project-form-container',

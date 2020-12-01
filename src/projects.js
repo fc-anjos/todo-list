@@ -1,16 +1,16 @@
 import project from './project';
-import task from './task';
 
-const defaultTask = task({
+const defaultTask = ({
   title: 'First Task',
   description: 'First Description',
   priority: '0',
   project: 'teste',
-  dateString: '2020-12-28',
+  dateString: '2020-12-10',
 });
 
 const defaultProject = project('default');
-defaultProject.appendTask(defaultTask);
+
+defaultProject.createTask(defaultTask);
 const projects = { defaultProject };
 
 export default projects;
