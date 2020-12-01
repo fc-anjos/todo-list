@@ -79,8 +79,19 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  position: relative;
 }
 
+.src-styles-todo_element-module__buttons--1f71y {
+  position: absolute;
+  left: -3.5em;
+  width: 2.8em;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  height: 100%;
+  align-items: center;
+}
 
 
 .src-styles-input_project-module__inputProject--1M_VC {

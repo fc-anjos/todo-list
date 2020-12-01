@@ -13,8 +13,11 @@ const todoElement = todo => {
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
   return `
-    <i class="fa fa-camera-retro"></i>
     <div class="${styles.todoContainer}">
+      <div class=${styles.buttons}>
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pen"></i>
+      </div>
       <div class="test">${title}</div>
       <div>${description}</div>
       <div>${priority}</div>

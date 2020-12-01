@@ -4700,7 +4700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"todoContainer":"src-styles-todo_element-module__todoContainer--1wDP9"});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"todoContainer":"src-styles-todo_element-module__todoContainer--1wDP9","buttons":"src-styles-todo_element-module__buttons--1f71y"});
 
 /***/ }),
 
@@ -4932,8 +4932,11 @@ const todoElement = todo => {
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
   return `
-    <i class="fa fa-camera-retro"></i>
     <div class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}">
+      <div class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.buttons}>
+        <i class="fa fa-trash"></i>
+        <i class="fa fa-pen"></i>
+      </div>
       <div class="test">${title}</div>
       <div>${description}</div>
       <div>${priority}</div>
