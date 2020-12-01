@@ -1,36 +1,74 @@
+.src-styles-index-module__container--OSMII {
+  margin: 0 auto;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+}
+
 .src-styles-index-module__main--_xvwR {
   margin: 0 auto;
-  flex: 0 0 80%;
+  flex: 1 0 60%;
   background-color: rgba(255, 0, 255, 0.1);
+}
+
+.src-styles-index-module__tasksInner--1D3B7 {
+  margin: 60px;
 }
 
 .src-styles-index-module__sidebar--2B4Xv {
   background-color: rgba(0, 255, 255, 0.2);
   flex: 0 0 20%;
+  display: block;
 }
 
-.src-styles-index-module__container--OSMII {
-  margin: 0 auto;
+.src-styles-index-module__toggleSidebarContainer--2GNLl {
+  background-color: rgba(255, 255, 0, 0.2);
+  flex: 0 0 50px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .src-styles-input_todo-module__inputTodo--2ljbb {
   display: none;
+  margin-top: 0.4em;
 }
 
+.src-styles-input_todo-module__form--1qeex {
+  width: 100%;
+  position: relative;
+  top: 1.4em;
+}
 
+.src-styles-input_todo-module__label--1DJAM {
+  position: absolute;
+  top: -1.4em;
+}
+
+.src-styles-input_todo-module__formFields--1NFjW {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 
 .src-styles-buttons-module__add--1RGLN {
   display: block;
+}
+
+.src-styles-buttons-module__addTask--1ig-1 {
+  display: block;
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
 }
 
 .src-styles-buttons-module__hide--2ZNuR {
   display: none;
 }
 
-.src-styles-task-container-module__todoContainer--tdFBI {
 
-}
 
 .src-styles-task-container-module__header--ew3UO {
   display: flex;
@@ -47,5 +85,14 @@
 
 .src-styles-input_project-module__inputProject--1M_VC {
   display: none;
+}
+
+.src-styles-toggle-project-side-bar-button-module__collapseProject--3rWL9 {
+  background-color: transparent;
+  border: none;
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
 }
 

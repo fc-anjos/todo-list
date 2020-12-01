@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import styles from '../styles/todo_element.module.css';
 
 const todoElement = todo => {
@@ -6,6 +7,7 @@ const todoElement = todo => {
     description,
     priority,
     project,
+    dueDate,
   } = todo;
 
   return `
@@ -14,10 +16,10 @@ const todoElement = todo => {
       <div>${description}</div>
       <div>${priority}</div>
       <div>${project}</div>
+      <div>${format(dueDate, 'yyyy-MM-dd')}</div>
     </div>
     `;
 };
-
 
 const projectToTag = project => {
   const title = project[1].name;

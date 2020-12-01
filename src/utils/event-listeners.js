@@ -7,7 +7,7 @@ import {
   hideEl, showEl, toggleVisibilityButton, toggleEl,
 } from './show-hide';
 
-const toggleProjectSideBar = e => {
+const toggleProjectSideBar = () => {
   toggleEl('project-side-bar');
 };
 

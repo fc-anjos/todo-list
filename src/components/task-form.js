@@ -39,6 +39,13 @@ const taskForm = () => `
         <select name="project" id="project-select">
         </select>
       </div>
+
+      <div>
+        <label class="${styles.label}" for="dateString">Due Date</label>
+        <input type="date" id="dateString" name="dateString">
+        </select>
+      </div>
+
     </div>
     <input type="submit" value="Submit">
   </form>
