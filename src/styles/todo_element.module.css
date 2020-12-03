@@ -5,7 +5,7 @@
   position: relative;
 }
 
-.buttons {
+.buttonsContainer {
   position: absolute;
   left: -3.5em;
   width: 2.8em;
@@ -16,3 +16,10 @@
   align-items: center;
 }
 
+
+.button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

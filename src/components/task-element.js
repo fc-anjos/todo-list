@@ -1,22 +1,28 @@
 import styles from '../styles/todo_element.module.css';
 
-const todoElement = todo => {
+const todoElement = (task, taskIndex, projectIndex) => {
+  console.log(taskIndex);
+  console.log(projectIndex);
   const {
     title,
     description,
     priority,
     project,
     dueDate,
-  } = todo;
+  } = task;
 
   const year = dueDate.getUTCFullYear();
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
   return `
     <div class="${styles.todoContainer}">
-      <div class=${styles.buttons}>
-        <i class="fa fa-trash"></i>
-        <i class="fa fa-pen"></i>
+      <div class=${styles.buttonsContainer}>
+        <button class=${styles.button} data-task-index=${taskIndex}>
+          <i class="fa fa-trash"></i>
+        </button>
+        <button class=${styles.button} data-task-index=${taskIndex}>
+          <i class="fa fa-pen"></i>
+        </button>
       </div>
       <div class="test">${title}</div>
       <div>${description}</div>
@@ -27,11 +33,11 @@ const todoElement = todo => {
     `;
 };
 
-const projectToTag = project => {
+const projectToTag = (project, projectIndex) => {
   const title = project.name;
   const content = project.tasks;
   const isEmpty = content.length === 0;
-  const genTags = (title, content) => title + content.map(todoElement).join('');
+  const genTags = (title, content) => title + content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex)).join('');
 
   if (isEmpty) {
     return `

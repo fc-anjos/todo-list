@@ -4700,7 +4700,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 // extracted by mini-css-extract-plugin
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"todoContainer":"src-styles-todo_element-module__todoContainer--1wDP9","buttons":"src-styles-todo_element-module__buttons--1f71y"});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({"todoContainer":"src-styles-todo_element-module__todoContainer--1wDP9","buttonsContainer":"src-styles-todo_element-module__buttonsContainer--1cwJS","button":"src-styles-todo_element-module__button--1cYqI"});
 
 /***/ }),
 
@@ -4919,23 +4919,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/todo_element.module.css */ "./src/styles/todo_element.module.css");
 ;
 
-const todoElement = todo => {
+const todoElement = (task, taskIndex, projectIndex) => {
+  console.log(taskIndex);
+  console.log(projectIndex);
   const {
     title,
     description,
     priority,
     project,
     dueDate,
-  } = todo;
+  } = task;
 
   const year = dueDate.getUTCFullYear();
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
   return `
     <div class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}">
-      <div class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.buttons}>
-        <i class="fa fa-trash"></i>
-        <i class="fa fa-pen"></i>
+      <div class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.buttonsContainer}>
+        <button class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} data-task-index=${taskIndex}>
+          <i class="fa fa-trash"></i>
+        </button>
+        <button class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} data-task-index=${taskIndex}>
+          <i class="fa fa-pen"></i>
+        </button>
       </div>
       <div class="test">${title}</div>
       <div>${description}</div>
@@ -4946,11 +4952,11 @@ const todoElement = todo => {
     `;
 };
 
-const projectToTag = project => {
+const projectToTag = (project, projectIndex) => {
   const title = project.name;
   const content = project.tasks;
   const isEmpty = content.length === 0;
-  const genTags = (title, content) => title + content.map(todoElement).join('');
+  const genTags = (title, content) => title + content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex)).join('');
 
   if (isEmpty) {
     return `
@@ -5212,9 +5218,19 @@ const defaultTask = ({
   dateString: '2020-12-10',
 });
 
+const task2 = ({
+  title: 'Default Task 2',
+  description: 'Second Task',
+  priority: '2',
+  project: 'Default Project',
+  dateString: '2020-12-12',
+});
+
 const defaultProject = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)('default');
 
 defaultProject.createTask(defaultTask);
+defaultProject.createTask(task2);
+
 const projects = [defaultProject];
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (projects);

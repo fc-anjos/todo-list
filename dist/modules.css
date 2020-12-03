@@ -82,7 +82,7 @@
   position: relative;
 }
 
-.src-styles-todo_element-module__buttons--1f71y {
+.src-styles-todo_element-module__buttonsContainer--1cwJS {
   position: absolute;
   left: -3.5em;
   width: 2.8em;
@@ -93,6 +93,13 @@
   align-items: center;
 }
 
+
+.src-styles-todo_element-module__button--1cYqI {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
 
 .src-styles-input_project-module__inputProject--1M_VC {
   display: none;
