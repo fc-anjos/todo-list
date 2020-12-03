@@ -1,8 +1,7 @@
 import styles from '../styles/todo_element.module.css';
+import deleteTask from '../utils/delete-edit-tasks';
 
 const todoElement = (task, taskIndex, projectIndex) => {
-  console.log(taskIndex);
-  console.log(projectIndex);
   const {
     title,
     description,
@@ -17,10 +16,16 @@ const todoElement = (task, taskIndex, projectIndex) => {
   return `
     <div class="${styles.todoContainer}">
       <div class=${styles.buttonsContainer}>
-        <button class=${styles.button} data-task-index=${taskIndex}>
+        <button class="${styles.button} delete-btn"
+          data-task_index=${taskIndex}
+          data-project_index=${projectIndex}
+          >
           <i class="fa fa-trash"></i>
         </button>
-        <button class=${styles.button} data-task-index=${taskIndex}>
+        <button class="${styles.button} edit-btn"
+          data-task_index=${taskIndex}
+          data-project_index=${projectIndex}
+          >
           <i class="fa fa-pen"></i>
         </button>
       </div>
@@ -51,10 +56,12 @@ const projectToTag = (project, projectIndex) => {
   return genTags(title, content);
 };
 
+
 const drawTodos = projects => {
   const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };
+
 
 export default drawTodos;
