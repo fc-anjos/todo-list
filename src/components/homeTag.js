@@ -4,7 +4,7 @@ import toggleProjectSideBarButton from './toggle-project-sidebar-button';
 import header from './header';
 import taskContainer from './task-container';
 import { ShowTaskFormBtn } from './buttons';
-import { taskForm } from './task-form';
+import { createTaskForm } from './task-form';
 
 const homeTag = () => `
   <div class=${styles.container}>
@@ -21,7 +21,7 @@ const homeTag = () => `
       ${header()}
       <div class=${styles.tasksInner}>
         ${taskContainer()}
-        ${taskForm()}
+        ${createTaskForm()}
         ${ShowTaskFormBtn()}
       </div>
     </div>

@@ -5,8 +5,9 @@ import {
   toggleProjectSideBar,
 } from './event-handlers';
 
+import { updateProjectOptions, editTaskForm } from '../components/task-form';
+
 import drawTodos from '../components/task-element';
-import { updateProjectOptions } from '../components/task-form';
 
 const addToggleProjectSideBarEventListener = () => {
   const btn = document.getElementById('collapse-project');
@@ -23,8 +24,16 @@ const addProjectFormEventListener = projects => {
   form.addEventListener('submit', e => handleProjectForm(e, projects));
 };
 
+const updateTask = (e, projects) => {
+  const projectIndex = e.currentTarget.dataset.project_index;
+  const taskIndex = e.currentTarget.dataset.task_index;
+  const id = `project${projectIndex}Task${taskIndex}`;
+  const taskContainer = document.getElementById(id);
+  taskContainer.innerHTML = editTaskForm();
+};
+
 const addEditDeleteEventListener = projects => {
-  const edit_btns = document.querySelectorAll('.edit-btn');
+  const editBtns = document.querySelectorAll('.edit-btn');
   const deleteBtns = document.querySelectorAll('.delete-btn');
 
   Array.from(deleteBtns).forEach(element => {
@@ -32,6 +41,13 @@ const addEditDeleteEventListener = projects => {
       const updatedProjects = deleteTask(e, projects);
       drawTodos(updatedProjects);
       addEditDeleteEventListener(updatedProjects);
+    });
+  });
+
+  Array.from(editBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = updateTask(e, projects);
+      // drawTodos(updatedProjects);
     });
   });
 };

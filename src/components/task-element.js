@@ -16,7 +16,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
   const day = dueDate.getUTCDate();
 
   return `
-    <div class="${styles.todoContainer}">
+    <div class="${styles.todoContainer}" id="project${projectIndex}Task${taskIndex}">
       <div class=${styles.buttonsContainer}>
         <button class="${styles.button} delete-btn"
           data-task_index=${taskIndex}
@@ -31,7 +31,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
           <i class="fa fa-pen"></i>
         </button>
       </div>
-      <div class="test">${title}</div>
+      <div>${title}</div>
       <div>${description}</div>
       <div>${priority}</div>
       <div>${project}</div>

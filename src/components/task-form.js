@@ -14,42 +14,56 @@ const updateProjectOptions = projects => {
   projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
 };
 
-const taskForm = () => `
-<div id="task-form-container" class="${styles.inputTodo}">
-  ${HideTaskFormBtn()}
-  <form id="input-task" class="${styles.form}">
-    <div class="${styles.formFields}">
 
-      <div>
-        <label class="${styles.label}" for="title">Title</label>
-        <input type="text" id="title" name="title">
-      </div>
+const formContent = () => `
+  <div class="${styles.formFields}">
 
-      <div>
-        <label class="${styles.label}" for="description">Description</label>
-        <input type="text" id="description" name="description">
-      </div>
-
-      <div>
-        <label class="${styles.label}" for="priority">Priority</label>
-        <input type="number" id="number" name="priority">
-      </div>
-
-      <div>
-        <label class="${styles.label}" for="projectIndex">Project</label>
-        <select name="projectIndex" id="project-select">
-        </select>
-      </div>
-
-      <div>
-        <label class="${styles.label}" for="dateString">Due Date</label>
-        <input type="date" id="dateString" name="dateString">
-        </select>
-      </div>
-
+    <div>
+      <label class="${styles.label}" for="title">Title</label>
+      <input type="text" id="title" name="title">
     </div>
-    <input type="submit" value="Submit">
-  </form>
-</div>
+
+    <div>
+      <label class="${styles.label}" for="description">Description</label>
+      <input type="text" id="description" name="description">
+    </div>
+
+    <div>
+      <label class="${styles.label}" for="priority">Priority</label>
+      <input type="number" id="number" name="priority">
+    </div>
+
+    <div>
+      <label class="${styles.label}" for="projectIndex">Project</label>
+      <select name="projectIndex" id="project-select">
+      </select>
+    </div>
+
+    <div>
+      <label class="${styles.label}" for="dateString">Due Date</label>
+      <input type="date" id="dateString" name="dateString">
+      </select>
+    </div>
+
+  </div>
+  <input type="submit" value="Submit">
 `;
-export { taskForm, updateProjectOptions };
+
+const editTaskForm = () => `
+  <div>
+    <form>
+      ${formContent()}
+    </form>
+  </div>
+`;
+
+const createTaskForm = () => `
+  <div id="task-form-container" class="${styles.inputTodo}">
+    ${HideTaskFormBtn()}
+    <form id="input-task" class="${styles.form}">
+      ${formContent()}
+    </form>
+  </div>
+`;
+
+export { createTaskForm, editTaskForm, updateProjectOptions };
