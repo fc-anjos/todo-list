@@ -4,7 +4,7 @@ import {
   hideEl, showEl, toggleVisibilityButton, toggleEl,
 } from './show-hide';
 
-import { updateDOMWithProjects } from './add-event-listeners';
+import { updateProjectOptions } from '../components/task-form';
 
 const toggleProjectSideBar = () => {
   toggleEl('project-side-bar');
@@ -18,17 +18,6 @@ const deleteTask = (e, projects) => {
   return updatedProjects;
 };
 
-const addEditDeleteEventListener = projects => {
-  const edit_btns = document.querySelectorAll('.edit-btn');
-  const deleteBtns = document.querySelectorAll('.delete-btn');
-
-  Array.from(deleteBtns).forEach(element => {
-    element.addEventListener('click', e => {
-      const updatedProjects = deleteTask(e, projects);
-      updateDOMWithProjects(updatedProjects);
-    });
-  });
-};
 
 const handleTaskForm = (e, projects) => {
   e.preventDefault();
@@ -48,7 +37,7 @@ const handleProjectForm = (e, projects) => {
   if (!projects[object.name]) {
     const updatedProjects = projects;
     updatedProjects[object.name] = project(object.name);
-    updateDOMWithProjects(updatedProjects);
+    updateProjectOptions(updatedProjects);
   }
   hideEl('project-form-container');
   showEl('add-new-project');
@@ -57,7 +46,7 @@ const handleProjectForm = (e, projects) => {
 
 
 export {
-  addEditDeleteEventListener,
+  deleteTask,
   toggleVisibilityButton,
   handleProjectForm,
   handleTaskForm,

@@ -1,4 +1,4 @@
-import { updateDOMWithProjects, addStaticEventListeners } from './utils/add-event-listeners';
+import { updateDOMWithProjects, addStaticEventListeners } from './utils/event-listeners';
 import drawHome from './components/drawHome';
 
 import '@fortawesome/fontawesome-free/js/fontawesome';

@@ -1,54 +1,63 @@
-import project from '../project';
-import drawTodos from '../components/task-element';
 import {
-  hideEl, showEl, toggleVisibilityButton, toggleEl,
-} from './show-hide';
-
-import { updateDOMWithProjects } from './add-event-listeners';
-
-const toggleProjectSideBar = () => {
-  toggleEl('project-side-bar');
-};
-
-const deleteTask = (e, projects) => {
-  const projectIndex = e.currentTarget.dataset.project_index;
-  const taskIndex = e.currentTarget.dataset.task_index;
-  const updatedProjects = projects;
-  updatedProjects[projectIndex].tasks.splice(taskIndex, 1);
-  return updatedProjects;
-};
-
-
-const handleTaskForm = (e, projects) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const taskInfo = Object.fromEntries(formData);
-  projects[taskInfo.projectIndex].createTask(taskInfo);
-  hideEl('task-form-container');
-  showEl('add-new-task');
-  drawTodos(projects);
-  e.target.reset();
-};
-
-const handleProjectForm = (e, projects) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const object = Object.fromEntries(formData);
-  if (!projects[object.name]) {
-    const updatedProjects = projects;
-    updatedProjects[object.name] = project(object.name);
-    updateDOMWithProjects(updatedProjects);
-  }
-  hideEl('project-form-container');
-  showEl('add-new-project');
-  e.target.reset();
-};
-
-
-export {
-  addEditDeleteEventListener,
+  deleteTask,
   toggleVisibilityButton,
-  handleProjectForm,
-  handleTaskForm,
+  handleProjectForm, handleTaskForm,
   toggleProjectSideBar,
+} from './event-handlers';
+
+import drawTodos from '../components/task-element';
+import { updateProjectOptions } from '../components/task-form';
+
+const addToggleProjectSideBarEventListener = () => {
+  const btn = document.getElementById('collapse-project');
+  btn.addEventListener('click', e => toggleProjectSideBar(e));
 };
+
+const addTodoFormEventListener = projects => {
+  const form = document.getElementById('input-task');
+  form.addEventListener('submit', e => handleTaskForm(e, projects));
+};
+
+const addProjectFormEventListener = projects => {
+  const form = document.getElementById('input-project');
+  form.addEventListener('submit', e => handleProjectForm(e, projects));
+};
+
+const addEditDeleteEventListener = projects => {
+  const edit_btns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = deleteTask(e, projects);
+      drawTodos(updatedProjects);
+      addEditDeleteEventListener(updatedProjects);
+    });
+  });
+};
+
+const addStaticEventListeners = () => {
+  addToggleProjectSideBarEventListener();
+
+  toggleVisibilityButton({
+    showBtnId: 'add-new-task',
+    hideBtnId: 'hide-new-task',
+    targetId: 'task-form-container',
+  });
+
+  toggleVisibilityButton({
+    showBtnId: 'add-new-project',
+    hideBtnId: 'hide-new-project',
+    targetId: 'project-form-container',
+  });
+};
+
+const updateDOMWithProjects = projects => {
+  updateProjectOptions(projects);
+  drawTodos(projects);
+  addEditDeleteEventListener(projects);
+  addTodoFormEventListener(projects);
+  addProjectFormEventListener(projects);
+};
+
+export { updateDOMWithProjects, addStaticEventListeners };
