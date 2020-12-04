@@ -12,6 +12,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
   const year = dueDate.getUTCFullYear();
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
+
   return `
     <div class="${styles.todoContainer}">
       <div class=${styles.buttonsContainer}>

@@ -10,21 +10,24 @@ const toggleProjectSideBar = () => {
   toggleEl('project-side-bar');
 };
 
-const addEditDeleteEventListener = () => {
-  const edit_btns = document.querySelectorAll('.edit-btn');
-  const deleteBtns = document.querySelectorAll('.delete-btn');
-
-  Array.from(deleteBtns).forEach(element => {
-    element.addEventListener('click', e => deleteTask(e));
-  });
-};
 
 const deleteTask = e => {
   const projectIndex = e.currentTarget.dataset.project_index;
   const taskIndex = e.currentTarget.dataset.task_index;
   projects[projectIndex].tasks.splice(taskIndex, 1);
-  drawTodos(projects);
-  addEditDeleteEventListener();
+};
+
+const addEditDeleteEventListener = projects => {
+  const edit_btns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      deleteTask(e);
+      drawTodos(projects);
+      addEditDeleteEventListener(projects);
+    });
+  });
 };
 
 const handleTaskForm = e => {
@@ -71,7 +74,7 @@ const addProjectFormEventListener = () => {
 const addAllEventListeners = () => {
   updateProjectOptions(projects);
   drawTodos(projects);
-  addEditDeleteEventListener();
+  addEditDeleteEventListener(projects);
   addTodoFormEventListener();
   addProjectFormEventListener();
   addToggleProjectSideBarEventListener();
