@@ -1,5 +1,7 @@
 import styles from '../styles/todo_element.module.css';
 
+import { updateProjectOptions } from './task-form';
+
 const todoElement = (task, taskIndex, projectIndex) => {
   const {
     title,
@@ -61,6 +63,7 @@ const drawTodos = projects => {
   const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
+  updateProjectOptions(projects);
 };
 
 

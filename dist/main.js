@@ -4771,6 +4771,34 @@ const HideTaskFormBtn = () => `
 
 /***/ }),
 
+/***/ "./src/components/drawHome.js":
+/*!************************************!*\
+  !*** ./src/components/drawHome.js ***!
+  \************************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _homeTag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeTag */ "./src/components/homeTag.js");
+;
+
+const drawHome = () => {
+  const content = document.getElementById('content');
+  content.innerHTML = (0,_homeTag__WEBPACK_IMPORTED_MODULE_0__.default)();
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (drawHome);
+
+
+/***/ }),
+
 /***/ "./src/components/header.js":
 /*!**********************************!*\
   !*** ./src/components/header.js ***!
@@ -4791,6 +4819,65 @@ const header = () => `
 `;
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (header);
+
+
+/***/ }),
+
+/***/ "./src/components/homeTag.js":
+/*!***********************************!*\
+  !*** ./src/components/homeTag.js ***!
+  \***********************************/
+/*! namespace exports */
+/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */ });
+/* harmony import */ var _styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/index.module.css */ "./src/styles/index.module.css");
+/* harmony import */ var _project_side_bar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project-side-bar */ "./src/components/project-side-bar.js");
+/* harmony import */ var _toggle_project_sidebar_button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./toggle-project-sidebar-button */ "./src/components/toggle-project-sidebar-button.js");
+/* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./header */ "./src/components/header.js");
+/* harmony import */ var _task_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./task-container */ "./src/components/task-container.js");
+/* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
+/* harmony import */ var _task_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./task-form */ "./src/components/task-form.js");
+;
+
+
+
+
+
+
+
+const homeTag = () => `
+  <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.container}>
+
+    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.sidebar} id="project-side-bar">
+      ${(0,_project_side_bar__WEBPACK_IMPORTED_MODULE_1__.default)()}
+    </div>
+
+    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.toggleSidebarContainer}>
+      ${(0,_toggle_project_sidebar_button__WEBPACK_IMPORTED_MODULE_2__.default)()}
+    </div>
+
+    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.main}>
+      ${(0,_header__WEBPACK_IMPORTED_MODULE_3__.default)()}
+      <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.tasksInner}>
+        ${(0,_task_container__WEBPACK_IMPORTED_MODULE_4__.default)()}
+        ${(0,_task_form__WEBPACK_IMPORTED_MODULE_6__.taskForm)()}
+        ${(0,_buttons__WEBPACK_IMPORTED_MODULE_5__.ShowTaskFormBtn)()}
+      </div>
+    </div>
+
+  </div>
+`;
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (homeTag);
 
 
 /***/ }),
@@ -4917,11 +5004,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/todo_element.module.css */ "./src/styles/todo_element.module.css");
+/* harmony import */ var _task_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task-form */ "./src/components/task-form.js");
 ;
 
+
+
 const todoElement = (task, taskIndex, projectIndex) => {
-  console.log(taskIndex);
-  console.log(projectIndex);
   const {
     title,
     description,
@@ -4933,13 +5021,20 @@ const todoElement = (task, taskIndex, projectIndex) => {
   const year = dueDate.getUTCFullYear();
   const month = dueDate.getUTCMonth() + 1; // Date provides month index; not month number
   const day = dueDate.getUTCDate();
+
   return `
     <div class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}">
       <div class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.buttonsContainer}>
-        <button class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} data-task-index=${taskIndex}>
+        <button class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} delete-btn"
+          data-task_index=${taskIndex}
+          data-project_index=${projectIndex}
+          >
           <i class="fa fa-trash"></i>
         </button>
-        <button class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} data-task-index=${taskIndex}>
+        <button class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} edit-btn"
+          data-task_index=${taskIndex}
+          data-project_index=${projectIndex}
+          >
           <i class="fa fa-pen"></i>
         </button>
       </div>
@@ -4970,11 +5065,13 @@ const projectToTag = (project, projectIndex) => {
   return genTags(title, content);
 };
 
+
 const drawTodos = projects => {
   const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
 };
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (drawTodos);
 
@@ -5097,22 +5194,17 @@ const toggleProjectSideBarButton = () => `
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/index.module.css */ "./src/styles/index.module.css");
-/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/task-form */ "./src/components/task-form.js");
-/* harmony import */ var _components_buttons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/buttons */ "./src/components/buttons.js");
-/* harmony import */ var _components_task_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/task-container */ "./src/components/task-container.js");
-/* harmony import */ var _utils_event_listeners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./utils/event-listeners */ "./src/utils/event-listeners.js");
-/* harmony import */ var _components_header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/header */ "./src/components/header.js");
-/* harmony import */ var _components_project_side_bar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/project-side-bar */ "./src/components/project-side-bar.js");
-/* harmony import */ var _components_toggle_project_sidebar_button__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/toggle-project-sidebar-button */ "./src/components/toggle-project-sidebar-button.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ "./node_modules/@fortawesome/fontawesome-free/js/solid.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/regular */ "./node_modules/@fortawesome/fontawesome-free/js/regular.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
-/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/add-event-listeners */ "./src/utils/add-event-listeners.js");
+/* harmony import */ var _components_drawHome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/drawHome */ "./src/components/drawHome.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/solid */ "./node_modules/@fortawesome/fontawesome-free/js/solid.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/regular */ "./node_modules/@fortawesome/fontawesome-free/js/regular.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
+/* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./projects */ "./src/projects.js");
 ;
 
 
@@ -5123,41 +5215,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-const home = () => `
-  <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.container}>
-
-    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.sidebar} id="project-side-bar">
-      ${(0,_components_project_side_bar__WEBPACK_IMPORTED_MODULE_6__.default)()}
-    </div>
-
-    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.toggleSidebarContainer}>
-      ${(0,_components_toggle_project_sidebar_button__WEBPACK_IMPORTED_MODULE_7__.default)()}
-    </div>
-
-    <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.main}>
-      ${(0,_components_header__WEBPACK_IMPORTED_MODULE_5__.default)()}
-      <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.tasksInner}>
-        ${(0,_components_task_container__WEBPACK_IMPORTED_MODULE_3__.default)()}
-        ${(0,_components_task_form__WEBPACK_IMPORTED_MODULE_1__.taskForm)()}
-        ${(0,_components_buttons__WEBPACK_IMPORTED_MODULE_2__.ShowTaskFormBtn)()}
-      </div>
-    </div>
-
-  </div>
-`;
-
-const drawHome = () => {
-  const content = document.getElementById('content');
-  content.innerHTML = home();
-};
-
 window.addEventListener('DOMContentLoaded', () => {
-  drawHome();
-  (0,_utils_event_listeners__WEBPACK_IMPORTED_MODULE_4__.default)();
+  (0,_components_drawHome__WEBPACK_IMPORTED_MODULE_1__.default)();
+  (0,_utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__.addStaticEventListeners)();
+  (0,_utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__.updateDOMWithProjects)(_projects__WEBPACK_IMPORTED_MODULE_6__.default);
 });
 
 
@@ -5273,26 +5334,114 @@ const task = object => {
 
 /***/ }),
 
-/***/ "./src/utils/event-listeners.js":
-/*!**************************************!*\
-  !*** ./src/utils/event-listeners.js ***!
-  \**************************************/
+/***/ "./src/utils/add-event-listeners.js":
+/*!******************************************!*\
+  !*** ./src/utils/add-event-listeners.js ***!
+  \******************************************/
 /*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export addStaticEventListeners [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export updateDOMWithProjects [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
+/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
+/* harmony export */   "updateDOMWithProjects": () => /* binding */ updateDOMWithProjects,
+/* harmony export */   "addStaticEventListeners": () => /* binding */ addStaticEventListeners
+/* harmony export */ });
+/* harmony import */ var _event_handlers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./event-handlers */ "./src/utils/event-handlers.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
+;
+
+
+
+const addToggleProjectSideBarEventListener = () => {
+  const btn = document.getElementById('collapse-project');
+  btn.addEventListener('click', e => (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.toggleProjectSideBar)(e));
+};
+
+const addTodoFormEventListener = projects => {
+  const form = document.getElementById('input-task');
+  form.addEventListener('submit', e => (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.handleTaskForm)(e, projects));
+};
+
+const addProjectFormEventListener = projects => {
+  const form = document.getElementById('input-project');
+  form.addEventListener('submit', e => (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.handleProjectForm)(e, projects));
+};
+
+const addEditDeleteEventListener = projects => {
+  const edit_btns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.deleteTask)(e, projects);
+      (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(updatedProjects);
+      addEditDeleteEventListener(updatedProjects);
+    });
+  });
+};
+
+const addStaticEventListeners = () => {
+  addToggleProjectSideBarEventListener();
+
+  (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.toggleVisibilityButton)({
+    showBtnId: 'add-new-task',
+    hideBtnId: 'hide-new-task',
+    targetId: 'task-form-container',
+  });
+
+  (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.toggleVisibilityButton)({
+    showBtnId: 'add-new-project',
+    hideBtnId: 'hide-new-project',
+    targetId: 'project-form-container',
+  });
+};
+
+const updateDOMWithProjects = projects => {
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_2__.updateProjectOptions)(projects);
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  addEditDeleteEventListener(projects);
+  addTodoFormEventListener(projects);
+  addProjectFormEventListener(projects);
+};
+
+
+
+
+/***/ }),
+
+/***/ "./src/utils/event-handlers.js":
+/*!*************************************!*\
+  !*** ./src/utils/event-handlers.js ***!
+  \*************************************/
+/*! namespace exports */
+/*! export addEditDeleteEventListener [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export handleProjectForm [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export handleTaskForm [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export toggleProjectSideBar [provided] [no usage info] [missing usage info prevents renaming] */
+/*! export toggleVisibilityButton [provided] [no usage info] [missing usage info prevents renaming] -> ./src/utils/show-hide.js .toggleVisibilityButton */
+/*! other exports [not provided] [no usage info] */
+/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.d, __webpack_require__.r, __webpack_require__.* */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addEditDeleteEventListener": () => /* binding */ addEditDeleteEventListener,
+/* harmony export */   "toggleVisibilityButton": () => /* reexport safe */ _show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleVisibilityButton,
+/* harmony export */   "handleProjectForm": () => /* binding */ handleProjectForm,
+/* harmony export */   "handleTaskForm": () => /* binding */ handleTaskForm,
+/* harmony export */   "toggleProjectSideBar": () => /* binding */ toggleProjectSideBar
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project */ "./src/project.js");
-/* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../projects */ "./src/projects.js");
-/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
-/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
-/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
+/* harmony import */ var _add_event_listeners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./add-event-listeners */ "./src/utils/add-event-listeners.js");
 ;
 
 
@@ -5300,70 +5449,56 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const toggleProjectSideBar = () => {
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleEl)('project-side-bar');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleEl)('project-side-bar');
 };
 
-const handleTaskForm = e => {
+const deleteTask = (e, projects) => {
+  const projectIndex = e.currentTarget.dataset.project_index;
+  const taskIndex = e.currentTarget.dataset.task_index;
+  const updatedProjects = projects;
+  updatedProjects[projectIndex].tasks.splice(taskIndex, 1);
+  return updatedProjects;
+};
+
+const addEditDeleteEventListener = projects => {
+  const edit_btns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = deleteTask(e, projects);
+      (0,_add_event_listeners__WEBPACK_IMPORTED_MODULE_3__.updateDOMWithProjects)(updatedProjects);
+    });
+  });
+};
+
+const handleTaskForm = (e, projects) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  _projects__WEBPACK_IMPORTED_MODULE_1__.default[taskInfo.projectIndex].createTask(taskInfo);
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('task-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-task');
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
+  projects[taskInfo.projectIndex].createTask(taskInfo);
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('task-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-task');
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
   e.target.reset();
 };
 
-const handleProjectForm = e => {
+const handleProjectForm = (e, projects) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const object = Object.fromEntries(formData);
-  if (!_projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name]) {
-    _projects__WEBPACK_IMPORTED_MODULE_1__.default[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
+  if (!projects[object.name]) {
+    const updatedProjects = projects;
+    updatedProjects[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
+    (0,_add_event_listeners__WEBPACK_IMPORTED_MODULE_3__.updateDOMWithProjects)(updatedProjects);
   }
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.hideEl)('project-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.showEl)('add-new-project');
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('project-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-project');
   e.target.reset();
 };
 
-const addToggleProjectSideBarEventListener = () => {
-  const btn = document.getElementById('collapse-project');
-  btn.addEventListener('click', e => toggleProjectSideBar(e));
-};
 
-const addTodoFormEventListener = () => {
-  const form = document.getElementById('input-task');
-  form.addEventListener('submit', e => handleTaskForm(e));
-};
 
-const addProjectFormEventListener = () => {
-  const form = document.getElementById('input-project');
-  form.addEventListener('submit', e => handleProjectForm(e));
-};
-
-const addAllEventListeners = () => {
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(_projects__WEBPACK_IMPORTED_MODULE_1__.default);
-  addTodoFormEventListener();
-  addProjectFormEventListener();
-  addToggleProjectSideBarEventListener();
-
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleVisibilityButton)({
-    showBtnId: 'add-new-task',
-    hideBtnId: 'hide-new-task',
-    targetId: 'task-form-container',
-  });
-
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_4__.toggleVisibilityButton)({
-    showBtnId: 'add-new-project',
-    hideBtnId: 'hide-new-project',
-    targetId: 'project-form-container',
-  });
-};
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addAllEventListeners);
 
 
 /***/ }),

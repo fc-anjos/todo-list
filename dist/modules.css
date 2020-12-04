@@ -1,34 +1,25 @@
-.src-styles-index-module__container--OSMII {
-  margin: 0 auto;
+.src-styles-todo_element-module__todoContainer--1wDP9 {
   display: flex;
-  height: 100vh;
-  width: 100vw;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.src-styles-todo_element-module__buttonsContainer--1cwJS {
+  position: absolute;
+  left: -3.5em;
+  width: 2.8em;
   display: flex;
-  flex-direction: row;
-}
-
-.src-styles-index-module__main--_xvwR {
-  margin: 0 auto;
-  flex: 1 0 60%;
-  background-color: rgba(255, 0, 255, 0.1);
-}
-
-.src-styles-index-module__tasksInner--1D3B7 {
-  margin: 60px;
-}
-
-.src-styles-index-module__sidebar--2B4Xv {
-  background-color: rgba(0, 255, 255, 0.2);
-  flex: 0 0 20%;
-  display: block;
-}
-
-.src-styles-index-module__toggleSidebarContainer--2GNLl {
-  background-color: rgba(255, 255, 0, 0.2);
-  flex: 0 0 50px;
-  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  height: 100%;
   align-items: center;
-  justify-content: center;
+}
+
+
+.src-styles-todo_element-module__button--1cYqI {
+  background-color: transparent;
+  border: 0;
 }
 
 .src-styles-input_todo-module__inputTodo--2ljbb {
@@ -70,35 +61,37 @@
 
 
 
-.src-styles-task-container-module__header--ew3UO {
+.src-styles-index-module__container--OSMII {
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
 }
 
-.src-styles-todo_element-module__todoContainer--1wDP9 {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  position: relative;
+.src-styles-index-module__main--_xvwR {
+  margin: 0 auto;
+  flex: 1 0 60%;
+  background-color: rgba(255, 0, 255, 0.1);
 }
 
-.src-styles-todo_element-module__buttonsContainer--1cwJS {
-  position: absolute;
-  left: -3.5em;
-  width: 2.8em;
+.src-styles-index-module__tasksInner--1D3B7 {
+  margin: 60px;
+}
+
+.src-styles-index-module__sidebar--2B4Xv {
+  background-color: rgba(0, 255, 255, 0.2);
+  flex: 0 0 20%;
+  display: block;
+}
+
+.src-styles-index-module__toggleSidebarContainer--2GNLl {
+  background-color: rgba(255, 255, 0, 0.2);
+  flex: 0 0 50px;
   display: flex;
-  justify-content: space-between;
-  font-size: 0.8em;
-  height: 100%;
   align-items: center;
-}
-
-
-.src-styles-todo_element-module__button--1cYqI {
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
 }
 
 .src-styles-input_project-module__inputProject--1M_VC {
@@ -112,5 +105,10 @@
   margin: 0;
   padding: 0;
   line-height: 0;
+}
+
+.src-styles-task-container-module__header--ew3UO {
+  display: flex;
+  justify-content: space-between;
 }
 

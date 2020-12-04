@@ -18,6 +18,17 @@ const deleteTask = (e, projects) => {
   return updatedProjects;
 };
 
+const addEditDeleteEventListener = projects => {
+  const edit_btns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = deleteTask(e, projects);
+      updateDOMWithProjects(updatedProjects);
+    });
+  });
+};
 
 const handleTaskForm = (e, projects) => {
   e.preventDefault();

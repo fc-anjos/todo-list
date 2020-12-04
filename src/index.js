@@ -1,4 +1,4 @@
-import addAllEventListeners from './utils/event-listeners';
+import { updateDOMWithProjects, addStaticEventListeners } from './utils/add-event-listeners';
 import drawHome from './components/drawHome';
 
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -6,8 +6,10 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 
+import projects from './projects';
 
 window.addEventListener('DOMContentLoaded', () => {
   drawHome();
-  addAllEventListeners();
+  addStaticEventListeners();
+  updateDOMWithProjects(projects);
 });
