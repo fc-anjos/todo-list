@@ -1,5 +1,4 @@
 import styles from '../styles/todo_element.module.css';
-import deleteTask from '../utils/delete-edit-tasks';
 
 const todoElement = (task, taskIndex, projectIndex) => {
   const {
