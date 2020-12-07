@@ -15,7 +15,9 @@ const projectOptions = (accumulator,
 // };
 
 
-const formContent = () => `
+const formContent = projects => {
+  console.log(projects);
+  return `
   <div class="${styles.formFields}">
 
     <div class="${styles.formField}">
@@ -48,8 +50,9 @@ const formContent = () => `
   </div>
   <input type="submit" value="Submit">
 `;
+};
 
-const editTaskForm = taskInfo => {
+const editTaskForm = (taskInfo, projects) => {
   const { projectIndex, taskIndex } = taskInfo;
   return `
   <div
@@ -57,17 +60,17 @@ const editTaskForm = taskInfo => {
     <form class="${styles.form}"
      data-task_index=${taskIndex}
      data-project_index=${projectIndex}>
-      ${formContent()}
+      ${formContent(projects)}
     </form>
   </div>
 `;
 };
 
-const createTaskForm = () => `
+const createTaskForm = projects => `
   <div id="task-form-container" class="${styles.inputTodo}">
     ${HideTaskFormBtn()}
     <form id="input-task" class="${styles.form}">
-      ${formContent()}
+      ${formContent(projects)}
     </form>
   </div>
 `;

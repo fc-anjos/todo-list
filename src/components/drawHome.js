@@ -1,8 +1,8 @@
 import homeTag from './homeTag';
 
-const drawHome = () => {
+const drawHome = projects => {
   const content = document.getElementById('content');
-  content.innerHTML = homeTag();
+  content.innerHTML = homeTag(projects);
 };
 
 export default drawHome;

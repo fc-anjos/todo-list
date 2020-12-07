@@ -6,7 +6,7 @@ import taskContainer from './task-container';
 import { ShowTaskFormBtn } from './buttons';
 import { createTaskForm } from './task-form';
 
-const homeTag = () => `
+const homeTag = projects => `
   <div class=${styles.container}>
 
     <div class=${styles.sidebar} id="project-side-bar">
@@ -21,7 +21,7 @@ const homeTag = () => `
       ${header()}
       <div class=${styles.tasksInner}>
         ${taskContainer()}
-        ${createTaskForm()}
+        ${createTaskForm(projects)}
         ${ShowTaskFormBtn()}
       </div>
     </div>

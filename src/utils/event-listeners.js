@@ -52,7 +52,7 @@ const updateTask = (e, projects) => {
   const taskIndex = e.currentTarget.dataset.task_index;
   const id = `project${projectIndex}Task${taskIndex}`;
   const taskContainer = document.getElementById(id);
-  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
+  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex }, projects);
   const form = taskContainer.querySelector('form');
   form.addEventListener('submit', e => handleEditTaskForm(e, projects));
   populateForm(form, projects);

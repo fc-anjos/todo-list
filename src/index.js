@@ -9,7 +9,7 @@ import '@fortawesome/fontawesome-free/js/brands';
 import projects from './projects';
 
 window.addEventListener('DOMContentLoaded', () => {
-  drawHome();
+  drawHome(projects);
   addStaticEventListeners();
   updateDOMWithProjects(projects);
 });
