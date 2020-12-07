@@ -2,11 +2,9 @@
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/@fortawesome/fontawesome-free/js/brands.js":
-/*!*****************************************************************!*\
+/*!*****************************************************************!*
   !*** ./node_modules/@fortawesome/fontawesome-free/js/brands.js ***!
   \*****************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
 /***/ (() => {
 
 /*!
@@ -600,11 +598,9 @@
 /***/ }),
 
 /***/ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js":
-/*!**********************************************************************!*\
+/*!**********************************************************************!*
   !*** ./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js ***!
   \**********************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements: __webpack_require__.g, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
 /*!
@@ -3151,11 +3147,9 @@
 /***/ }),
 
 /***/ "./node_modules/@fortawesome/fontawesome-free/js/regular.js":
-/*!******************************************************************!*\
+/*!******************************************************************!*
   !*** ./node_modules/@fortawesome/fontawesome-free/js/regular.js ***!
   \******************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
 /***/ (() => {
 
 /*!
@@ -3443,11 +3437,9 @@
 /***/ }),
 
 /***/ "./node_modules/@fortawesome/fontawesome-free/js/solid.js":
-/*!****************************************************************!*\
+/*!****************************************************************!*
   !*** ./node_modules/@fortawesome/fontawesome-free/js/solid.js ***!
   \****************************************************************/
-/*! unknown exports (runtime-defined) */
-/*! runtime requirements:  */
 /***/ (() => {
 
 /*!
@@ -4585,13 +4577,9 @@
 /***/ }),
 
 /***/ "./src/styles/buttons.module.css":
-/*!***************************************!*\
+/*!***************************************!*
   !*** ./src/styles/buttons.module.css ***!
   \***************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4605,13 +4593,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/index.module.css":
-/*!*************************************!*\
+/*!*************************************!*
   !*** ./src/styles/index.module.css ***!
   \*************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4625,13 +4609,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/input_project.module.css":
-/*!*********************************************!*\
+/*!*********************************************!*
   !*** ./src/styles/input_project.module.css ***!
   \*********************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4645,13 +4625,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/input_todo.module.css":
-/*!******************************************!*\
+/*!******************************************!*
   !*** ./src/styles/input_todo.module.css ***!
   \******************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4665,13 +4641,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/task-container.module.css":
-/*!**********************************************!*\
+/*!**********************************************!*
   !*** ./src/styles/task-container.module.css ***!
   \**********************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4685,13 +4657,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/todo_element.module.css":
-/*!********************************************!*\
+/*!********************************************!*
   !*** ./src/styles/todo_element.module.css ***!
   \********************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4705,13 +4673,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/styles/toggle-project-side-bar-button.module.css":
-/*!**************************************************************!*\
+/*!**************************************************************!*
   !*** ./src/styles/toggle-project-side-bar-button.module.css ***!
   \**************************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4725,16 +4689,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ "./src/components/buttons.js":
-/*!***********************************!*\
+/*!***********************************!*
   !*** ./src/components/buttons.js ***!
   \***********************************/
-/*! namespace exports */
-/*! export HideProjectFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export HideTaskFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export ShowProjectFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export ShowTaskFormBtn [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4746,7 +4703,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "HideProjectFormBtn": () => /* binding */ HideProjectFormBtn
 /* harmony export */ });
 /* harmony import */ var _styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/buttons.module.css */ "./src/styles/buttons.module.css");
-;
+
 
 const ShowTaskFormBtn = () => `
   <button id="add-new-task" class="${_styles_buttons_module_css__WEBPACK_IMPORTED_MODULE_0__.default.addTask}">
@@ -4772,13 +4729,9 @@ const HideTaskFormBtn = () => `
 /***/ }),
 
 /***/ "./src/components/drawHome.js":
-/*!************************************!*\
+/*!************************************!*
   !*** ./src/components/drawHome.js ***!
   \************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4787,7 +4740,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _homeTag__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeTag */ "./src/components/homeTag.js");
-;
+
 
 const drawHome = () => {
   const content = document.getElementById('content');
@@ -4800,13 +4753,9 @@ const drawHome = () => {
 /***/ }),
 
 /***/ "./src/components/header.js":
-/*!**********************************!*\
+/*!**********************************!*
   !*** ./src/components/header.js ***!
   \**********************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4824,13 +4773,9 @@ const header = () => `
 /***/ }),
 
 /***/ "./src/components/homeTag.js":
-/*!***********************************!*\
+/*!***********************************!*
   !*** ./src/components/homeTag.js ***!
   \***********************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4845,7 +4790,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _task_container__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./task-container */ "./src/components/task-container.js");
 /* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
 /* harmony import */ var _task_form__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./task-form */ "./src/components/task-form.js");
-;
+
 
 
 
@@ -4868,7 +4813,7 @@ const homeTag = () => `
       ${(0,_header__WEBPACK_IMPORTED_MODULE_3__.default)()}
       <div class=${_styles_index_module_css__WEBPACK_IMPORTED_MODULE_0__.default.tasksInner}>
         ${(0,_task_container__WEBPACK_IMPORTED_MODULE_4__.default)()}
-        ${(0,_task_form__WEBPACK_IMPORTED_MODULE_6__.taskForm)()}
+        ${(0,_task_form__WEBPACK_IMPORTED_MODULE_6__.createTaskForm)()}
         ${(0,_buttons__WEBPACK_IMPORTED_MODULE_5__.ShowTaskFormBtn)()}
       </div>
     </div>
@@ -4883,13 +4828,9 @@ const homeTag = () => `
 /***/ }),
 
 /***/ "./src/components/project-form.js":
-/*!****************************************!*\
+/*!****************************************!*
   !*** ./src/components/project-form.js ***!
   \****************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4899,7 +4840,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
 /* harmony import */ var _styles_input_project_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/input_project.module.css */ "./src/styles/input_project.module.css");
-;
+
 
 
 const projectForm = () => `
@@ -4924,13 +4865,9 @@ const projectForm = () => `
 /***/ }),
 
 /***/ "./src/components/project-side-bar.js":
-/*!********************************************!*\
+/*!********************************************!*
   !*** ./src/components/project-side-bar.js ***!
   \********************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4940,7 +4877,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
 /* harmony import */ var _project_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project-form */ "./src/components/project-form.js");
-;
+
 
 
 const projectSideBar = () => `
@@ -4955,13 +4892,9 @@ const projectSideBar = () => `
 /***/ }),
 
 /***/ "./src/components/task-container.js":
-/*!******************************************!*\
+/*!******************************************!*
   !*** ./src/components/task-container.js ***!
   \******************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4970,7 +4903,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _styles_task_container_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/task-container.module.css */ "./src/styles/task-container.module.css");
-;
+
 
 const taskContainer = () => `
   <div class="${_styles_task_container_module_css__WEBPACK_IMPORTED_MODULE_0__.default.header}">
@@ -4989,13 +4922,9 @@ const taskContainer = () => `
 /***/ }),
 
 /***/ "./src/components/task-element.js":
-/*!****************************************!*\
+/*!****************************************!*
   !*** ./src/components/task-element.js ***!
   \****************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5005,7 +4934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/todo_element.module.css */ "./src/styles/todo_element.module.css");
 /* harmony import */ var _task_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./task-form */ "./src/components/task-form.js");
-;
+
 
 
 
@@ -5023,7 +4952,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
   const day = dueDate.getUTCDate();
 
   return `
-    <div class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}">
+    <div class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.todoContainer}" id="project${projectIndex}Task${taskIndex}">
       <div class=${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.buttonsContainer}>
         <button class="${_styles_todo_element_module_css__WEBPACK_IMPORTED_MODULE_0__.default.button} delete-btn"
           data-task_index=${taskIndex}
@@ -5038,7 +4967,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
           <i class="fa fa-pen"></i>
         </button>
       </div>
-      <div class="test">${title}</div>
+      <div>${title}</div>
       <div>${description}</div>
       <div>${priority}</div>
       <div>${project}</div>
@@ -5070,6 +4999,7 @@ const drawTodos = projects => {
   const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
   container.innerHTML = projectTags;
+  (0,_task_form__WEBPACK_IMPORTED_MODULE_1__.updateProjectOptions)(projects);
 };
 
 
@@ -5079,25 +5009,21 @@ const drawTodos = projects => {
 /***/ }),
 
 /***/ "./src/components/task-form.js":
-/*!*************************************!*\
+/*!*************************************!*
   !*** ./src/components/task-form.js ***!
   \*************************************/
-/*! namespace exports */
-/*! export taskForm [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export updateProjectOptions [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "taskForm": () => /* binding */ taskForm,
+/* harmony export */   "createTaskForm": () => /* binding */ createTaskForm,
+/* harmony export */   "editTaskForm": () => /* binding */ editTaskForm,
 /* harmony export */   "updateProjectOptions": () => /* binding */ updateProjectOptions
 /* harmony export */ });
 /* harmony import */ var _styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/input_todo.module.css */ "./src/styles/input_todo.module.css");
 /* harmony import */ var _buttons__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./buttons */ "./src/components/buttons.js");
-;
+
 
 
 const projectOption = project => `
@@ -5113,57 +5039,67 @@ const updateProjectOptions = projects => {
   projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
 };
 
-const taskForm = () => `
-<div id="task-form-container" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
-  ${(0,_buttons__WEBPACK_IMPORTED_MODULE_1__.HideTaskFormBtn)()}
-  <form id="input-task" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.form}">
-    <div class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.formFields}">
 
-      <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="title">Title</label>
-        <input type="text" id="title" name="title">
-      </div>
+const formContent = () => `
+  <div class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.formFields}">
 
-      <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="description">Description</label>
-        <input type="text" id="description" name="description">
-      </div>
-
-      <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="priority">Priority</label>
-        <input type="number" id="number" name="priority">
-      </div>
-
-      <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="projectIndex">Project</label>
-        <select name="projectIndex" id="project-select">
-        </select>
-      </div>
-
-      <div>
-        <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="dateString">Due Date</label>
-        <input type="date" id="dateString" name="dateString">
-        </select>
-      </div>
-
+    <div>
+      <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="title">Title</label>
+      <input type="text" id="title" name="title">
     </div>
-    <input type="submit" value="Submit">
-  </form>
-</div>
+
+    <div>
+      <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="description">Description</label>
+      <input type="text" id="description" name="description">
+    </div>
+
+    <div>
+      <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="priority">Priority</label>
+      <input type="number" id="number" name="priority">
+    </div>
+
+    <div>
+      <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="projectIndex">Project</label>
+      <select name="projectIndex" id="project-select">
+      </select>
+    </div>
+
+    <div>
+      <label class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.label}" for="dateString">Due Date</label>
+      <input type="date" id="dateString" name="dateString">
+      </select>
+    </div>
+
+  </div>
+  <input type="submit" value="Submit">
 `;
+
+const editTaskForm = () => `
+  <div>
+    <form class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.form}">
+      ${formContent()}
+    </form>
+  </div>
+`;
+
+const createTaskForm = () => `
+  <div id="task-form-container" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.inputTodo}">
+    ${(0,_buttons__WEBPACK_IMPORTED_MODULE_1__.HideTaskFormBtn)()}
+    <form id="input-task" class="${_styles_input_todo_module_css__WEBPACK_IMPORTED_MODULE_0__.default.form}">
+      ${formContent()}
+    </form>
+  </div>
+`;
+
 
 
 
 /***/ }),
 
 /***/ "./src/components/toggle-project-sidebar-button.js":
-/*!*********************************************************!*\
+/*!*********************************************************!*
   !*** ./src/components/toggle-project-sidebar-button.js ***!
   \*********************************************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5172,7 +5108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _styles_toggle_project_side_bar_button_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../styles/toggle-project-side-bar-button.module.css */ "./src/styles/toggle-project-side-bar-button.module.css");
-;
+
 
 const toggleProjectSideBarButton = () => `
     <button id="collapse-project" class=${_styles_toggle_project_side_bar_button_module_css__WEBPACK_IMPORTED_MODULE_0__.default.collapseProject}>&lt</button>
@@ -5184,17 +5120,14 @@ const toggleProjectSideBarButton = () => `
 /***/ }),
 
 /***/ "./src/index.js":
-/*!**********************!*\
+/*!**********************!*
   !*** ./src/index.js ***!
   \**********************/
-/*! namespace exports */
-/*! exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/add-event-listeners */ "./src/utils/add-event-listeners.js");
+/* harmony import */ var _utils_event_listeners__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/event-listeners */ "./src/utils/event-listeners.js");
 /* harmony import */ var _components_drawHome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/drawHome */ "./src/components/drawHome.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/fontawesome */ "./node_modules/@fortawesome/fontawesome-free/js/fontawesome.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_fontawesome__WEBPACK_IMPORTED_MODULE_2__);
@@ -5205,7 +5138,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/brands */ "./node_modules/@fortawesome/fontawesome-free/js/brands.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_brands__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _projects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./projects */ "./src/projects.js");
-;
+
 
 
 
@@ -5217,21 +5150,17 @@ __webpack_require__.r(__webpack_exports__);
 
 window.addEventListener('DOMContentLoaded', () => {
   (0,_components_drawHome__WEBPACK_IMPORTED_MODULE_1__.default)();
-  (0,_utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__.addStaticEventListeners)();
-  (0,_utils_add_event_listeners__WEBPACK_IMPORTED_MODULE_0__.updateDOMWithProjects)(_projects__WEBPACK_IMPORTED_MODULE_6__.default);
+  (0,_utils_event_listeners__WEBPACK_IMPORTED_MODULE_0__.addStaticEventListeners)();
+  (0,_utils_event_listeners__WEBPACK_IMPORTED_MODULE_0__.updateDOMWithProjects)(_projects__WEBPACK_IMPORTED_MODULE_6__.default);
 });
 
 
 /***/ }),
 
 /***/ "./src/project.js":
-/*!************************!*\
+/*!************************!*
   !*** ./src/project.js ***!
   \************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5240,7 +5169,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _task__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./task */ "./src/task.js");
-;
+
 
 const project = name => {
   const tasks = [];
@@ -5254,13 +5183,9 @@ const project = name => {
 /***/ }),
 
 /***/ "./src/projects.js":
-/*!*************************!*\
+/*!*************************!*
   !*** ./src/projects.js ***!
   \*************************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5269,7 +5194,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => __WEBPACK_DEFAULT_EXPORT__
 /* harmony export */ });
 /* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./project */ "./src/project.js");
-;
+
 
 const defaultTask = ({
   title: 'Default Task',
@@ -5300,13 +5225,9 @@ const projects = [defaultProject];
 /***/ }),
 
 /***/ "./src/task.js":
-/*!*********************!*\
+/*!*********************!*
   !*** ./src/task.js ***!
   \*********************/
-/*! namespace exports */
-/*! export default [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_exports__, __webpack_require__.r, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5334,15 +5255,79 @@ const task = object => {
 
 /***/ }),
 
-/***/ "./src/utils/add-event-listeners.js":
-/*!******************************************!*\
-  !*** ./src/utils/add-event-listeners.js ***!
-  \******************************************/
-/*! namespace exports */
-/*! export addStaticEventListeners [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export updateDOMWithProjects [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
+/***/ "./src/utils/event-handlers.js":
+/*!*************************************!*
+  !*** ./src/utils/event-handlers.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "deleteTask": () => /* binding */ deleteTask,
+/* harmony export */   "toggleVisibilityButton": () => /* reexport safe */ _show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleVisibilityButton,
+/* harmony export */   "handleProjectForm": () => /* binding */ handleProjectForm,
+/* harmony export */   "handleTaskForm": () => /* binding */ handleTaskForm,
+/* harmony export */   "toggleProjectSideBar": () => /* binding */ toggleProjectSideBar
+/* harmony export */ });
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project */ "./src/project.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
+
+
+
+
+
+
+const toggleProjectSideBar = () => {
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleEl)('project-side-bar');
+};
+
+const deleteTask = (e, projects) => {
+  const projectIndex = e.currentTarget.dataset.project_index;
+  const taskIndex = e.currentTarget.dataset.task_index;
+  const updatedProjects = projects;
+  updatedProjects[projectIndex].tasks.splice(taskIndex, 1);
+  return updatedProjects;
+};
+
+
+const handleTaskForm = (e, projects) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const taskInfo = Object.fromEntries(formData);
+  projects[taskInfo.projectIndex].createTask(taskInfo);
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('task-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-task');
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  e.target.reset();
+};
+
+const handleProjectForm = (e, projects) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const object = Object.fromEntries(formData);
+  if (!projects[object.name]) {
+    const updatedProjects = projects;
+    updatedProjects[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
+    (0,_components_task_form__WEBPACK_IMPORTED_MODULE_3__.updateProjectOptions)(updatedProjects);
+  }
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('project-form-container');
+  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-project');
+  e.target.reset();
+};
+
+
+
+
+
+/***/ }),
+
+/***/ "./src/utils/event-listeners.js":
+/*!**************************************!*
+  !*** ./src/utils/event-listeners.js ***!
+  \**************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -5352,9 +5337,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "addStaticEventListeners": () => /* binding */ addStaticEventListeners
 /* harmony export */ });
 /* harmony import */ var _event_handlers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./event-handlers */ "./src/utils/event-handlers.js");
-/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
-/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
-;
+/* harmony import */ var _components_task_form__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-form */ "./src/components/task-form.js");
+/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
+
+
+
 
 
 
@@ -5373,15 +5360,32 @@ const addProjectFormEventListener = projects => {
   form.addEventListener('submit', e => (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.handleProjectForm)(e, projects));
 };
 
+const updateTask = (e, projects) => {
+  const projectIndex = e.currentTarget.dataset.project_index;
+  const taskIndex = e.currentTarget.dataset.task_index;
+  const id = `project${projectIndex}Task${taskIndex}`;
+  const taskContainer = document.getElementById(id);
+  taskContainer.innerHTML = (0,_components_task_form__WEBPACK_IMPORTED_MODULE_1__.editTaskForm)();
+  populateForm();
+  addEditFormEventListener();
+};
+
 const addEditDeleteEventListener = projects => {
-  const edit_btns = document.querySelectorAll('.edit-btn');
+  const editBtns = document.querySelectorAll('.edit-btn');
   const deleteBtns = document.querySelectorAll('.delete-btn');
 
   Array.from(deleteBtns).forEach(element => {
     element.addEventListener('click', e => {
       const updatedProjects = (0,_event_handlers__WEBPACK_IMPORTED_MODULE_0__.deleteTask)(e, projects);
-      (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(updatedProjects);
+      (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(updatedProjects);
       addEditDeleteEventListener(updatedProjects);
+    });
+  });
+
+  Array.from(editBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = updateTask(e, projects);
+      // drawTodos(updatedProjects);
     });
   });
 };
@@ -5403,8 +5407,8 @@ const addStaticEventListeners = () => {
 };
 
 const updateDOMWithProjects = projects => {
-  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_2__.updateProjectOptions)(projects);
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
+  (0,_components_task_form__WEBPACK_IMPORTED_MODULE_1__.updateProjectOptions)(projects);
+  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_2__.default)(projects);
   addEditDeleteEventListener(projects);
   addTodoFormEventListener(projects);
   addProjectFormEventListener(projects);
@@ -5415,105 +5419,10 @@ const updateDOMWithProjects = projects => {
 
 /***/ }),
 
-/***/ "./src/utils/event-handlers.js":
-/*!*************************************!*\
-  !*** ./src/utils/event-handlers.js ***!
-  \*************************************/
-/*! namespace exports */
-/*! export addEditDeleteEventListener [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export handleProjectForm [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export handleTaskForm [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleProjectSideBar [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleVisibilityButton [provided] [no usage info] [missing usage info prevents renaming] -> ./src/utils/show-hide.js .toggleVisibilityButton */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__, __webpack_exports__, __webpack_require__.d, __webpack_require__.r, __webpack_require__.* */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "addEditDeleteEventListener": () => /* binding */ addEditDeleteEventListener,
-/* harmony export */   "toggleVisibilityButton": () => /* reexport safe */ _show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleVisibilityButton,
-/* harmony export */   "handleProjectForm": () => /* binding */ handleProjectForm,
-/* harmony export */   "handleTaskForm": () => /* binding */ handleTaskForm,
-/* harmony export */   "toggleProjectSideBar": () => /* binding */ toggleProjectSideBar
-/* harmony export */ });
-/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../project */ "./src/project.js");
-/* harmony import */ var _components_task_element__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/task-element */ "./src/components/task-element.js");
-/* harmony import */ var _show_hide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./show-hide */ "./src/utils/show-hide.js");
-/* harmony import */ var _add_event_listeners__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./add-event-listeners */ "./src/utils/add-event-listeners.js");
-;
-
-
-
-
-
-const toggleProjectSideBar = () => {
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.toggleEl)('project-side-bar');
-};
-
-const deleteTask = (e, projects) => {
-  const projectIndex = e.currentTarget.dataset.project_index;
-  const taskIndex = e.currentTarget.dataset.task_index;
-  const updatedProjects = projects;
-  updatedProjects[projectIndex].tasks.splice(taskIndex, 1);
-  return updatedProjects;
-};
-
-const addEditDeleteEventListener = projects => {
-  const edit_btns = document.querySelectorAll('.edit-btn');
-  const deleteBtns = document.querySelectorAll('.delete-btn');
-
-  Array.from(deleteBtns).forEach(element => {
-    element.addEventListener('click', e => {
-      const updatedProjects = deleteTask(e, projects);
-      (0,_add_event_listeners__WEBPACK_IMPORTED_MODULE_3__.updateDOMWithProjects)(updatedProjects);
-    });
-  });
-};
-
-const handleTaskForm = (e, projects) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const taskInfo = Object.fromEntries(formData);
-  projects[taskInfo.projectIndex].createTask(taskInfo);
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('task-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-task');
-  (0,_components_task_element__WEBPACK_IMPORTED_MODULE_1__.default)(projects);
-  e.target.reset();
-};
-
-const handleProjectForm = (e, projects) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const object = Object.fromEntries(formData);
-  if (!projects[object.name]) {
-    const updatedProjects = projects;
-    updatedProjects[object.name] = (0,_project__WEBPACK_IMPORTED_MODULE_0__.default)(object.name);
-    (0,_add_event_listeners__WEBPACK_IMPORTED_MODULE_3__.updateDOMWithProjects)(updatedProjects);
-  }
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.hideEl)('project-form-container');
-  (0,_show_hide__WEBPACK_IMPORTED_MODULE_2__.showEl)('add-new-project');
-  e.target.reset();
-};
-
-
-
-
-
-/***/ }),
-
 /***/ "./src/utils/show-hide.js":
-/*!********************************!*\
+/*!********************************!*
   !*** ./src/utils/show-hide.js ***!
   \********************************/
-/*! namespace exports */
-/*! export hideEl [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export showEl [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleEl [provided] [no usage info] [missing usage info prevents renaming] */
-/*! export toggleVisibilityButton [provided] [no usage info] [missing usage info prevents renaming] */
-/*! other exports [not provided] [no usage info] */
-/*! runtime requirements: __webpack_require__.r, __webpack_exports__, __webpack_require__.d, __webpack_require__.* */
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

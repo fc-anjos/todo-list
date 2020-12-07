@@ -8,8 +8,15 @@ const task = object => {
   } = object;
 
   const dueDate = new Date(dateString);
+
+  const formattedDate = () => dueDate.toISOString().substring(0, 10);
   return {
-    title, description, priority, project, dueDate,
+    title,
+    description,
+    priority,
+    project,
+    dueDate,
+    formattedDate,
   };
 };
 

@@ -14,6 +14,11 @@ module.exports = env => {
       publicPath: 'assets/',
     },
 
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      compress: true,
+      port: 9000,
+    },
     mode: isDev ? 'development' : 'production',
     devtool: sourceMap ? 'source-map' : false,
 

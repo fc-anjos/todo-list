@@ -24,14 +24,40 @@ const addProjectFormEventListener = projects => {
   form.addEventListener('submit', e => handleProjectForm(e, projects));
 };
 
+const handleEditTaskForm = (e, projects) => {
+  e.preventDefault();
+};
+
+const populateForm = (form, projects) => {
+  const taskIndex = (form.dataset.task_index);
+  const projectIndex = (form.dataset.project_index);
+  const project = projects[projectIndex];
+  const task = project.tasks[taskIndex];
+
+  const titleField = form.querySelector('#title');
+  titleField.value = task.title;
+
+  const descriptionField = form.querySelector('#description');
+  descriptionField.value = task.description;
+
+  const priorityField = form.querySelector('#priority');
+  priorityField.value = task.priority;
+
+  const dateStringField = form.querySelector('#dateString');
+  dateStringField.value = task.formattedDate();
+};
+
 const updateTask = (e, projects) => {
   const projectIndex = e.currentTarget.dataset.project_index;
   const taskIndex = e.currentTarget.dataset.task_index;
   const id = `project${projectIndex}Task${taskIndex}`;
   const taskContainer = document.getElementById(id);
-  taskContainer.innerHTML = editTaskForm();
-  populateForm();
-  addEditFormEventListener();
+  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
+  const form = taskContainer.querySelector('form');
+  form.addEventListener('submit', e => handleEditTaskForm(e, projects));
+  populateForm(form, projects);
+  // updateProjectOptions
+  // addEditFormEventListener();
 };
 
 const addEditDeleteEventListener = projects => {

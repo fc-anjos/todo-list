@@ -30,7 +30,7 @@ const formContent = () => `
 
     <div class="${styles.formField}">
       <label class="${styles.label}" for="priority">Priority</label>
-      <input type="number" id="number" name="priority">
+      <input type="number" id="priority" name="priority">
     </div>
 
     <div class="${styles.formField}">
@@ -49,13 +49,19 @@ const formContent = () => `
   <input type="submit" value="Submit">
 `;
 
-const editTaskForm = () => `
-  <div class="${styles.editTaskContainer}">
-    <form class="${styles.form}">
+const editTaskForm = taskInfo => {
+  const { projectIndex, taskIndex } = taskInfo;
+  return `
+  <div
+    class="${styles.editTaskContainer}">
+    <form class="${styles.form}"
+     data-task_index=${taskIndex}
+     data-project_index=${projectIndex}>
       ${formContent()}
     </form>
   </div>
 `;
+};
 
 const createTaskForm = () => `
   <div id="task-form-container" class="${styles.inputTodo}">
