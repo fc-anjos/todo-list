@@ -5,7 +5,7 @@ import {
   toggleProjectSideBar,
 } from './event-handlers';
 
-import { updateProjectOptions, editTaskForm } from '../components/task-form';
+import { editTaskForm } from '../components/task-form';
 
 import drawTodos from '../components/task-element';
 
@@ -97,7 +97,7 @@ const addStaticEventListeners = () => {
 };
 
 const updateDOMWithProjects = projects => {
-  updateProjectOptions(projects);
+  // updateProjectOptions(projects);
   drawTodos(projects);
   addEditDeleteEventListener(projects);
   addTodoFormEventListener(projects);

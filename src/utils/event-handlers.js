@@ -4,8 +4,6 @@ import {
   hideEl, showEl, toggleVisibilityButton, toggleEl,
 } from './show-hide';
 
-import { updateProjectOptions } from '../components/task-form';
-
 const toggleProjectSideBar = () => {
   toggleEl('project-side-bar');
 };
@@ -37,7 +35,7 @@ const handleProjectForm = (e, projects) => {
   if (!projects[object.name]) {
     const updatedProjects = projects;
     updatedProjects[object.name] = project(object.name);
-    updateProjectOptions(updatedProjects);
+    // updateProjectOptions(updatedProjects);
   }
   hideEl('project-form-container');
   showEl('add-new-project');

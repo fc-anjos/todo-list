@@ -8,11 +8,11 @@ const projectOption = project => `
 const projectOptions = (accumulator,
   projectName) => accumulator + projectOption(projectName);
 
-const updateProjectOptions = projects => {
-  const projectNames = projects.map((project, index) => ({ index, name: project.name }));
-  const projectSelect = document.getElementById('project-select');
-  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
-};
+// const updateProjectOptions = projects => {
+//   const projectNames = projects.map((project, index) => ({ index, name: project.name }));
+//   const projectSelect = document.getElementById('project-select');
+//   projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
+// };
 
 
 const formContent = () => `
@@ -72,4 +72,4 @@ const createTaskForm = () => `
   </div>
 `;
 
-export { createTaskForm, editTaskForm, updateProjectOptions };
+export { createTaskForm, editTaskForm };
