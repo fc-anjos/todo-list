@@ -18,28 +18,28 @@ const updateProjectOptions = projects => {
 const formContent = () => `
   <div class="${styles.formFields}">
 
-    <div>
+    <div class="${styles.formField}">
       <label class="${styles.label}" for="title">Title</label>
       <input type="text" id="title" name="title">
     </div>
 
-    <div>
+    <div class="${styles.formField}">
       <label class="${styles.label}" for="description">Description</label>
       <input type="text" id="description" name="description">
     </div>
 
-    <div>
+    <div class="${styles.formField}">
       <label class="${styles.label}" for="priority">Priority</label>
       <input type="number" id="number" name="priority">
     </div>
 
-    <div>
+    <div class="${styles.formField}">
       <label class="${styles.label}" for="projectIndex">Project</label>
       <select name="projectIndex" id="project-select">
       </select>
     </div>
 
-    <div>
+    <div class="${styles.formField}">
       <label class="${styles.label}" for="dateString">Due Date</label>
       <input type="date" id="dateString" name="dateString">
       </select>
@@ -50,8 +50,8 @@ const formContent = () => `
 `;
 
 const editTaskForm = () => `
-  <div>
-    <form>
+  <div class="${styles.editTaskContainer}">
+    <form class="${styles.form}">
       ${formContent()}
     </form>
   </div>

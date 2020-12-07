@@ -5,17 +5,19 @@
 
 .form {
   width: 100%;
-  position: relative;
-  top: 1.4em;
 }
 
-.label {
-  position: absolute;
-  top: -1.4em;
+.formField {
+  display: flex;
+  flex-direction: column;
 }
 
 .formFields {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.editTaskContainer {
+  width: 100%;
 }

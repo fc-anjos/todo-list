@@ -30,6 +30,8 @@ const updateTask = (e, projects) => {
   const id = `project${projectIndex}Task${taskIndex}`;
   const taskContainer = document.getElementById(id);
   taskContainer.innerHTML = editTaskForm();
+  populateForm();
+  addEditFormEventListener();
 };
 
 const addEditDeleteEventListener = projects => {
