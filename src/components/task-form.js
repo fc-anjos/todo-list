@@ -8,14 +8,11 @@ const projectOption = project => `
 const projectOptions = (accumulator,
   projectName) => accumulator + projectOption(projectName);
 
-const updateProjectOptions = projects => {
+const formContent = projects => {
   const projectNames = projects.map((project, index) => ({ index, name: project.name }));
-  const projectSelect = document.getElementById('project-select');
-  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
-};
+  const optionsTags = projectNames.reduce(projectOptions, '');
 
-
-const formContent = () => `
+  return `
   <div class="${styles.formFields}">
 
     <div class="${styles.formField}">
@@ -35,7 +32,8 @@ const formContent = () => `
 
     <div class="${styles.formField}">
       <label class="${styles.label}" for="projectIndex">Project</label>
-      <select name="projectIndex" id="project-select">
+      select name="projectIndex" class="project-select">
+        ${optionsTags}
       </select>
     </div>
 
@@ -48,6 +46,7 @@ const formContent = () => `
   </div>
   <input type="submit" value="Submit">
 `;
+};
 
 const editTaskForm = taskInfo => {
   const { projectIndex, taskIndex } = taskInfo;
@@ -67,7 +66,7 @@ const createTaskForm = () => `
   <div id="task-form-container" class="${styles.inputTodo}">
     ${HideTaskFormBtn()}
     <form id="input-task" class="${styles.form}">
-      ${formContent()}
+      ${formContent(projects)}
     </form>
   </div>
 `;
