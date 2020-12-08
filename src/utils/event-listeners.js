@@ -14,9 +14,32 @@ const addToggleProjectSideBarEventListener = () => {
   btn.addEventListener('click', e => toggleProjectSideBar(e));
 };
 
+const addEditDeleteEventListener = projects => {
+  const editBtns = document.querySelectorAll('.edit-btn');
+  const deleteBtns = document.querySelectorAll('.delete-btn');
+
+  Array.from(deleteBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = deleteTask(e, projects);
+      drawTodos(updatedProjects);
+      addEditDeleteEventListener(updatedProjects);
+    });
+  });
+
+  Array.from(editBtns).forEach(element => {
+    element.addEventListener('click', e => {
+      const updatedProjects = updateTask(e, projects);
+      // drawTodos(updatedProjects);
+    });
+  });
+};
 const addTodoFormEventListener = projects => {
   const form = document.getElementById('input-task');
-  form.addEventListener('submit', e => handleTaskForm(e, projects));
+  form.addEventListener('submit', e => {
+    handleTaskForm(e, projects);
+    drawTodos(projects);
+    addEditDeleteEventListener(projects);
+  });
 };
 
 const addProjectFormEventListener = projects => {
@@ -60,25 +83,6 @@ const updateTask = (e, projects) => {
   // addEditFormEventListener();
 };
 
-const addEditDeleteEventListener = projects => {
-  const editBtns = document.querySelectorAll('.edit-btn');
-  const deleteBtns = document.querySelectorAll('.delete-btn');
-
-  Array.from(deleteBtns).forEach(element => {
-    element.addEventListener('click', e => {
-      const updatedProjects = deleteTask(e, projects);
-      drawTodos(updatedProjects);
-      addEditDeleteEventListener(updatedProjects);
-    });
-  });
-
-  Array.from(editBtns).forEach(element => {
-    element.addEventListener('click', e => {
-      const updatedProjects = updateTask(e, projects);
-      // drawTodos(updatedProjects);
-    });
-  });
-};
 
 const addStaticEventListeners = () => {
   addToggleProjectSideBarEventListener();

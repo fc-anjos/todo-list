@@ -1,5 +1,4 @@
 import project from '../project';
-import drawTodos from '../components/task-element';
 import {
   hideEl, showEl, toggleVisibilityButton, toggleEl,
 } from './show-hide';
@@ -26,7 +25,6 @@ const handleTaskForm = (e, projects) => {
   projects[taskInfo.projectIndex].createTask(taskInfo);
   hideEl('task-form-container');
   showEl('add-new-task');
-  drawTodos(projects);
   e.target.reset();
 };
 
