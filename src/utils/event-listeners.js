@@ -71,7 +71,6 @@ const populateForm = (form, projects) => {
 
   const projectField = form.querySelector('#project-select');
   projectField.innerHTML = projects.map(projectOption).join('');
-  console.log(projects.map(projectOption).join(''));
 };
 
 const updateTask = (e, projects) => {

@@ -21,3 +21,14 @@
 .editTaskContainer {
   width: 100%;
 }
+
+.buttonsContainer {
+  position: absolute;
+  left: -1.2em;
+  top: 1.7em;
+}
+
+.rowContainer {
+  position: relative;
+  width: 100%;
+}

@@ -47,13 +47,18 @@ const formContent = () => `
 const editTaskForm = taskInfo => {
   const { projectIndex, taskIndex } = taskInfo;
   return `
-  <div
-    class="${styles.editTaskContainer}">
-    <form class="${styles.form}"
-     data-task_index=${taskIndex}
-     data-project_index=${projectIndex}>
-      ${formContent()}
-    </form>
+  <div class=${styles.rowContainer}>
+    <div class=${styles.buttonsContainer}>
+      <i class="fa fa-window-close"></i>
+    </div>
+    <div
+      class="${styles.editTaskContainer}">
+      <form class="${styles.form}"
+       data-task_index=${taskIndex}
+       data-project_index=${projectIndex}>
+        ${formContent()}
+      </form>
+    </div>
   </div>
 `;
 };

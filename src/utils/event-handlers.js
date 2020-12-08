@@ -17,7 +17,6 @@ const deleteTask = (e, projects) => {
   return updatedProjects;
 };
 
-
 const handleTaskForm = (e, projects) => {
   e.preventDefault();
   const formData = new FormData(e.target);
@@ -41,7 +40,6 @@ const handleProjectForm = (e, projects) => {
   showEl('add-new-project');
   e.target.reset();
 };
-
 
 export {
   deleteTask,
