@@ -5,7 +5,7 @@ import {
   toggleProjectSideBar,
 } from './event-handlers';
 
-import { updateProjectOptions, editTaskForm } from '../components/task-form';
+import { updateProjectOptions, editTaskForm, projectOption } from '../components/task-form';
 
 import drawTodos from '../components/task-element';
 
@@ -68,6 +68,10 @@ const populateForm = (form, projects) => {
 
   const dateStringField = form.querySelector('#dateString');
   dateStringField.value = task.formattedDate();
+
+  const projectField = form.querySelector('#project-select');
+  projectField.innerHTML = projects.map(projectOption).join('');
+  console.log(projects.map(projectOption).join(''));
 };
 
 const updateTask = (e, projects) => {

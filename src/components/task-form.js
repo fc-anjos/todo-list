@@ -1,19 +1,14 @@
 import styles from '../styles/input_todo.module.css';
 import { HideTaskFormBtn } from './buttons';
 
-const projectOption = project => `
-    <option value="${project.index}">${project.name}</option>
+const projectOption = (project, index) => `
+    <option value="${index}">${project.name}</option>
 `;
 
-const projectOptions = (accumulator,
-  projectName) => accumulator + projectOption(projectName);
-
 const updateProjectOptions = projects => {
-  const projectNames = projects.map((project, index) => ({ index, name: project.name }));
   const projectSelect = document.getElementById('project-select');
-  projectSelect.innerHTML = projectNames.reduce(projectOptions, '');
+  projectSelect.innerHTML = projects.map(projectOption).join('');
 };
-
 
 const formContent = () => `
   <div class="${styles.formFields}">
@@ -35,7 +30,7 @@ const formContent = () => `
 
     <div class="${styles.formField}">
       <label class="${styles.label}" for="projectIndex">Project</label>
-      <select name="projectIndex" id="project-select">
+      <select name="projectIndex" id="project-select" class="project-select">
       </select>
     </div>
 
@@ -72,4 +67,6 @@ const createTaskForm = () => `
   </div>
 `;
 
-export { createTaskForm, editTaskForm, updateProjectOptions };
+export {
+  createTaskForm, editTaskForm, updateProjectOptions, projectOption,
+};
