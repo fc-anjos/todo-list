@@ -1,7 +1,9 @@
 import {
   deleteTask,
   toggleVisibilityButton,
-  handleProjectForm, handleTaskForm,
+  handleProjectForm,
+  handleCreateTaskForm,
+  handleEditTaskForm,
   toggleProjectSideBar,
 } from './event-handlers';
 
@@ -29,26 +31,21 @@ const addEditDeleteEventListener = projects => {
   Array.from(editBtns).forEach(element => {
     element.addEventListener('click', e => {
       const updatedProjects = updateTask(e, projects);
-      // drawTodos(updatedProjects);
     });
   });
 };
 const addTodoFormEventListener = projects => {
   const form = document.getElementById('input-task');
   form.addEventListener('submit', e => {
-    handleTaskForm(e, projects);
-    drawTodos(projects);
-    addEditDeleteEventListener(projects);
+    const updatedProjects = handleCreateTaskForm(e, projects);
+    drawTodos(updatedProjects);
+    addEditDeleteEventListener(updatedProjects);
   });
 };
 
 const addProjectFormEventListener = projects => {
   const form = document.getElementById('input-project');
   form.addEventListener('submit', e => handleProjectForm(e, projects));
-};
-
-const handleEditTaskForm = (e, projects) => {
-  e.preventDefault();
 };
 
 const populateForm = (form, projects) => {
@@ -80,8 +77,12 @@ const updateTask = (e, projects) => {
   const taskContainer = document.getElementById(id);
   taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
   const form = taskContainer.querySelector('form');
-  form.addEventListener('submit', e => handleEditTaskForm(e, projects));
   populateForm(form, projects);
+  form.addEventListener('submit', e => {
+    const updateProjects = handleEditTaskForm(e, projects);
+    drawTodos(updateProjects);
+    addEditDeleteEventListener(updateProjects);
+  });
   // updateProjectOptions
   // addEditFormEventListener();
 };

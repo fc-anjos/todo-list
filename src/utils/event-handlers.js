@@ -17,14 +17,29 @@ const deleteTask = (e, projects) => {
   return updatedProjects;
 };
 
-const handleTaskForm = (e, projects) => {
+const handleCreateTaskForm = (e, projects) => {
   e.preventDefault();
   const formData = new FormData(e.target);
   const taskInfo = Object.fromEntries(formData);
-  projects[taskInfo.projectIndex].createTask(taskInfo);
+  const updatedProjects = projects;
+  updatedProjects[taskInfo.projectIndex].createTask(taskInfo);
   hideEl('task-form-container');
   showEl('add-new-task');
   e.target.reset();
+  return updatedProjects;
+};
+
+const handleEditTaskForm = (e, projects) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const taskInfo = Object.fromEntries(formData);
+  const project = projects[taskInfo.projectIndex];
+  const updatedProject = project.replaceTask(taskInfo);
+  const updatedProjects = projects;
+  updatedProjects[taskInfo.projectIndex] = updatedProject;
+  hideEl('task-form-container');
+  showEl('add-new-task');
+  return updatedProjects;
 };
 
 const handleProjectForm = (e, projects) => {
@@ -45,6 +60,7 @@ export {
   deleteTask,
   toggleVisibilityButton,
   handleProjectForm,
-  handleTaskForm,
+  handleCreateTaskForm,
+  handleEditTaskForm,
   toggleProjectSideBar,
 };

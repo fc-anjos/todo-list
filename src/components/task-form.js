@@ -11,6 +11,7 @@ const updateProjectOptions = projects => {
 };
 
 const formContent = () => `
+
   <div class="${styles.formFields}">
 
     <div class="${styles.formField}">
@@ -41,7 +42,7 @@ const formContent = () => `
     </div>
 
   </div>
-  <input type="submit" value="Submit">
+  <input id="submit" type="submit" value="Submit">
 `;
 
 const editTaskForm = taskInfo => {
@@ -56,6 +57,7 @@ const editTaskForm = taskInfo => {
       <form class="${styles.form}"
        data-task_index=${taskIndex}
        data-project_index=${projectIndex}>
+      <input type="hidden" id="taskIndex" name="taskIndex" value="${taskIndex}">
         ${formContent()}
       </form>
     </div>
