@@ -18,7 +18,6 @@ const handleEditTaskForm = (e, projects) => {
   return updatedProjects;
 };
 const todoTag = (task, taskIndex, projectIndex) => {
-  // ADD EVENT LISTENERS ON THIS LEVEL
   const {
     title,
     description,
@@ -55,7 +54,7 @@ const todoTag = (task, taskIndex, projectIndex) => {
 `;
 };
 
-const populateForm = (form, task) => {
+const populateForm = (form, task, projects) => {
   const titleField = form.querySelector('#title');
   titleField.value = task.title;
 
@@ -68,16 +67,16 @@ const populateForm = (form, task) => {
   const dateStringField = form.querySelector('#dateString');
   dateStringField.value = task.formattedDate();
 
-  // const projectField = form.querySelector('#project-select');
-  // projectField.innerHTML = projects.map(projectOption).join('');
+  const projectField = form.querySelector('#project-select');
+  projectField.innerHTML = projects.map(projectOption).join('');
 };
 
-const updateTask = (task, taskIndex, projectIndex) => {
+const updateTask = (task, taskIndex, projectIndex, projects) => {
   const id = `project${projectIndex}Task${taskIndex}`;
   const taskContainer = document.getElementById(id);
   taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
   const form = taskContainer.querySelector('form');
-  populateForm(form, task);
+  populateForm(form, task, projects);
   form.addEventListener('submit', e => {
     const updatedProjects = handleEditTaskForm(e, projects);
     drawTodos(updatedProjects);
@@ -85,29 +84,29 @@ const updateTask = (task, taskIndex, projectIndex) => {
   });
 };
 
-const todoElement = (task, taskIndex, projectIndex) => {
+const todoElement = (task, taskIndex, projectIndex, projects) => {
   const fragment = new DocumentFragment();
   const div = document.createElement('div');
   div.innerHTML = todoTag(task, taskIndex, projectIndex);
   const editBtn = div.querySelector('.edit-btn');
   editBtn.addEventListener('click', () => {
-    updateTask(task, taskIndex, projectIndex);
+    updateTask(task, taskIndex, projectIndex, projects);
   });
   fragment.appendChild(div);
   return fragment;
 };
 
-const taskElements = (title, content, projectIndex) => {
+const taskElements = (title, content, projectIndex, projects) => {
   const fragment = new DocumentFragment();
   // fragment.innerHTML = title;
-  const todoElements = content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex));
+  const todoElements = content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex, projects));
   const todoElementsContainer = mergeNodes(todoElements);
   fragment.appendChild(todoElementsContainer);
   return fragment;
 };
 
 // Takes a project and converts it in an array of tasks tags
-const projectElement = (project, projectIndex) => {
+const projectElement = (project, projectIndex, projects) => {
   const fragment = new DocumentFragment();
   const title = project.name;
   const content = project.tasks;
@@ -122,7 +121,7 @@ const projectElement = (project, projectIndex) => {
      </div>
      `;
   } else {
-    fragment.appendChild(taskElements(title, content, projectIndex));
+    fragment.appendChild(taskElements(title, content, projectIndex, projects));
   }
   return fragment;
 };
