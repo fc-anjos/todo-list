@@ -5,6 +5,7 @@ import { updateProjectOptions } from './task-form';
 import mergeNodes from '../utils/merge-nodes';
 
 const todoTag = (task, taskIndex, projectIndex) => {
+  const fragment = new DocumentFragment();
   const {
     title,
     description,
@@ -43,7 +44,9 @@ const todoTag = (task, taskIndex, projectIndex) => {
 
 const todoElement = (task, taskIndex, projectIndex) => {
   const fragment = new DocumentFragment();
-  fragment.innerHTML = todoTag(task, taskIndex, projectIndex);
+  const div = document.createElement('div');
+  div.innerHTML = todoTag(task, taskIndex, projectIndex);
+  fragment.appendChild(div);
   return fragment;
 };
 
