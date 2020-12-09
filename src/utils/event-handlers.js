@@ -29,18 +29,6 @@ const handleCreateTaskForm = (e, projects) => {
   return updatedProjects;
 };
 
-const handleEditTaskForm = (e, projects) => {
-  e.preventDefault();
-  const formData = new FormData(e.target);
-  const taskInfo = Object.fromEntries(formData);
-  const project = projects[taskInfo.projectIndex];
-  const updatedProject = project.replaceTask(taskInfo);
-  const updatedProjects = projects;
-  updatedProjects[taskInfo.projectIndex] = updatedProject;
-  hideEl('task-form-container');
-  showEl('add-new-task');
-  return updatedProjects;
-};
 
 const handleProjectForm = (e, projects) => {
   e.preventDefault();
@@ -61,6 +49,5 @@ export {
   toggleVisibilityButton,
   handleProjectForm,
   handleCreateTaskForm,
-  handleEditTaskForm,
   toggleProjectSideBar,
 };

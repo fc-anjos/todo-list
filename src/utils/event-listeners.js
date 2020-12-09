@@ -3,7 +3,6 @@ import {
   toggleVisibilityButton,
   handleProjectForm,
   handleCreateTaskForm,
-  handleEditTaskForm,
   toggleProjectSideBar,
 } from './event-handlers';
 
@@ -27,12 +26,6 @@ const addEditDeleteEventListener = projects => {
       addEditDeleteEventListener(updatedProjects);
     });
   });
-
-  Array.from(editBtns).forEach(element => {
-    element.addEventListener('click', e => {
-      const updatedProjects = updateTask(e, projects);
-    });
-  });
 };
 
 const addTodoFormEventListener = projects => {
@@ -47,43 +40,6 @@ const addTodoFormEventListener = projects => {
 const addProjectFormEventListener = projects => {
   const form = document.getElementById('input-project');
   form.addEventListener('submit', e => handleProjectForm(e, projects));
-};
-
-const populateForm = (form, projects) => {
-  const taskIndex = (form.dataset.task_index);
-  const projectIndex = (form.dataset.project_index);
-  const project = projects[projectIndex];
-  const task = project.tasks[taskIndex];
-
-  const titleField = form.querySelector('#title');
-  titleField.value = task.title;
-
-  const descriptionField = form.querySelector('#description');
-  descriptionField.value = task.description;
-
-  const priorityField = form.querySelector('#priority');
-  priorityField.value = task.priority;
-
-  const dateStringField = form.querySelector('#dateString');
-  dateStringField.value = task.formattedDate();
-
-  const projectField = form.querySelector('#project-select');
-  projectField.innerHTML = projects.map(projectOption).join('');
-};
-
-const updateTask = (e, projects) => {
-  const projectIndex = e.currentTarget.dataset.project_index;
-  const taskIndex = e.currentTarget.dataset.task_index;
-  const id = `project${projectIndex}Task${taskIndex}`;
-  const taskContainer = document.getElementById(id);
-  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
-  const form = taskContainer.querySelector('form');
-  populateForm(form, projects);
-  form.addEventListener('submit', e => {
-    const updatedProjects = handleEditTaskForm(e, projects);
-    drawTodos(updatedProjects);
-    addEditDeleteEventListener(updatedProjects);
-  });
 };
 
 const addStaticEventListeners = () => {

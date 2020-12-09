@@ -1,9 +1,22 @@
 import styles from '../styles/task_element.module.css';
 
-import { updateProjectOptions } from './task-form';
+import { projectOption, editTaskForm } from './task-form';
+import { hideEl, showEl } from '../utils/show-hide';
 
 import mergeNodes from '../utils/merge-nodes';
 
+const handleEditTaskForm = (e, projects) => {
+  e.preventDefault();
+  const formData = new FormData(e.target);
+  const taskInfo = Object.fromEntries(formData);
+  const project = projects[taskInfo.projectIndex];
+  const updatedProject = project.replaceTask(taskInfo);
+  const updatedProjects = projects;
+  updatedProjects[taskInfo.projectIndex] = updatedProject;
+  hideEl('task-form-container');
+  showEl('add-new-task');
+  return updatedProjects;
+};
 const todoTag = (task, taskIndex, projectIndex) => {
   // ADD EVENT LISTENERS ON THIS LEVEL
   const {
@@ -42,15 +55,44 @@ const todoTag = (task, taskIndex, projectIndex) => {
 `;
 };
 
+const populateForm = (form, task) => {
+  const titleField = form.querySelector('#title');
+  titleField.value = task.title;
+
+  const descriptionField = form.querySelector('#description');
+  descriptionField.value = task.description;
+
+  const priorityField = form.querySelector('#priority');
+  priorityField.value = task.priority;
+
+  const dateStringField = form.querySelector('#dateString');
+  dateStringField.value = task.formattedDate();
+
+  // const projectField = form.querySelector('#project-select');
+  // projectField.innerHTML = projects.map(projectOption).join('');
+};
+
+const updateTask = (task, taskIndex, projectIndex) => {
+  const id = `project${projectIndex}Task${taskIndex}`;
+  const taskContainer = document.getElementById(id);
+  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
+  const form = taskContainer.querySelector('form');
+  populateForm(form, task);
+  form.addEventListener('submit', e => {
+    const updatedProjects = handleEditTaskForm(e, projects);
+    drawTodos(updatedProjects);
+    addEditDeleteEventListener(updatedProjects);
+  });
+};
+
 const todoElement = (task, taskIndex, projectIndex) => {
   const fragment = new DocumentFragment();
   const div = document.createElement('div');
   div.innerHTML = todoTag(task, taskIndex, projectIndex);
   const editBtn = div.querySelector('.edit-btn');
-  editBtn.addEventListener('click', e => {
-    const updatedProjects = updateTask(e, projects);
+  editBtn.addEventListener('click', () => {
+    updateTask(task, taskIndex, projectIndex);
   });
-
   fragment.appendChild(div);
   return fragment;
 };
