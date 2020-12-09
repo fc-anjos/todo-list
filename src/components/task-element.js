@@ -5,7 +5,7 @@ import { updateProjectOptions } from './task-form';
 import mergeNodes from '../utils/merge-nodes';
 
 const todoTag = (task, taskIndex, projectIndex) => {
-  const fragment = new DocumentFragment();
+  // ADD EVENT LISTENERS ON THIS LEVEL
   const {
     title,
     description,
@@ -46,6 +46,11 @@ const todoElement = (task, taskIndex, projectIndex) => {
   const fragment = new DocumentFragment();
   const div = document.createElement('div');
   div.innerHTML = todoTag(task, taskIndex, projectIndex);
+  const editBtn = div.querySelector('.edit-btn');
+  editBtn.addEventListener('click', e => {
+    const updatedProjects = updateTask(e, projects);
+  });
+
   fragment.appendChild(div);
   return fragment;
 };
