@@ -34,6 +34,7 @@ const addEditDeleteEventListener = projects => {
     });
   });
 };
+
 const addTodoFormEventListener = projects => {
   const form = document.getElementById('input-task');
   form.addEventListener('submit', e => {
@@ -79,14 +80,11 @@ const updateTask = (e, projects) => {
   const form = taskContainer.querySelector('form');
   populateForm(form, projects);
   form.addEventListener('submit', e => {
-    const updateProjects = handleEditTaskForm(e, projects);
-    drawTodos(updateProjects);
-    addEditDeleteEventListener(updateProjects);
+    const updatedProjects = handleEditTaskForm(e, projects);
+    drawTodos(updatedProjects);
+    addEditDeleteEventListener(updatedProjects);
   });
-  // updateProjectOptions
-  // addEditFormEventListener();
 };
-
 
 const addStaticEventListeners = () => {
   addToggleProjectSideBarEventListener();

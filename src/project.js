@@ -7,7 +7,9 @@ const project = name => {
 
   const replaceTask = object => {
     const { taskIndex } = object;
-    tasks[taskIndex] = task({ ...object, project: name });
+    const replacedTask = task({ ...object, project: name });
+    tasks.splice(taskIndex, 1, replacedTask);
+    tasks[taskIndex] = replacedTask;
     return {
       name,
       tasks,

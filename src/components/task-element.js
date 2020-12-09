@@ -40,11 +40,13 @@ const todoElement = (task, taskIndex, projectIndex) => {
     `;
 };
 
+
+const genTags = (title, content, projectIndex) => title + content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex)).join('');
+
 const projectToTag = (project, projectIndex) => {
   const title = project.name;
   const content = project.tasks;
   const isEmpty = content.length === 0;
-  const genTags = (title, content) => title + content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex)).join('');
 
   if (isEmpty) {
     return `
@@ -55,7 +57,7 @@ const projectToTag = (project, projectIndex) => {
      </div>
      `;
   }
-  return genTags(title, content);
+  return genTags(title, content, projectIndex);
 };
 
 
