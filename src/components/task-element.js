@@ -1,4 +1,4 @@
-import styles from '../styles/todo_element.module.css';
+import styles from '../styles/task_element.module.css';
 
 import { updateProjectOptions } from './task-form';
 
@@ -43,6 +43,7 @@ const todoElement = (task, taskIndex, projectIndex) => {
 
 const genTags = (title, content, projectIndex) => title + content.map((task, taskIndex) => todoElement(task, taskIndex, projectIndex)).join('');
 
+// Takes a project and converts it in an array of tasks tags
 const projectToTag = (project, projectIndex) => {
   const title = project.name;
   const content = project.tasks;
@@ -64,7 +65,8 @@ const projectToTag = (project, projectIndex) => {
 const drawTodos = projects => {
   const projectTags = projects.map(projectToTag).join('');
   const container = document.getElementById('todo-container');
-  container.innerHTML = projectTags;
+  container.innerHTML = '';
+  container.insertAdjacentHTML('beforeend', projectTags);
   updateProjectOptions(projects);
 };
 
