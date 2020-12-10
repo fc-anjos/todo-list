@@ -16,7 +16,6 @@ const addToggleProjectSideBarEventListener = () => {
 };
 
 const addEditDeleteEventListener = projects => {
-  const editBtns = document.querySelectorAll('.edit-btn');
   const deleteBtns = document.querySelectorAll('.delete-btn');
 
   Array.from(deleteBtns).forEach(element => {
