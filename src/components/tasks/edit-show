@@ -1,0 +1,10 @@
+const editTask = (taskInfo, projects, task) => {
+  const template = document.createElement('template');
+  template.innerHTML = editTaskTag(taskInfo);
+  const form = template.querySelector('form');
+  populateForm(form, task, projects);
+  form.addEventListener('submit', e => {
+    handleEditTaskForm(e, projects);
+  });
+  return template.content;
+};

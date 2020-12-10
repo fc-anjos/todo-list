@@ -6,7 +6,7 @@ import {
   toggleProjectSideBar,
 } from './event-handlers';
 
-import { updateProjectOptions, editTaskForm, projectOption } from '../components/task-form';
+import { updateProjectOptions } from '../components/task-form';
 
 import drawTodos from '../components/task-element';
 

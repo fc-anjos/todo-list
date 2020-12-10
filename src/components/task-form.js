@@ -11,9 +11,7 @@ const updateProjectOptions = projects => {
 };
 
 const formContent = () => `
-
   <div class="${styles.formFields}">
-
     <div class="${styles.formField}">
       <label class="${styles.label}" for="title">Title</label>
       <input type="text" id="title" name="title">
@@ -45,25 +43,6 @@ const formContent = () => `
   <input id="submit" type="submit" value="Submit">
 `;
 
-const editTaskForm = taskInfo => {
-  const { projectIndex, taskIndex } = taskInfo;
-  return `
-  <div class=${styles.rowContainer}>
-    <div class=${styles.buttonsContainer}>
-      <i class="fa fa-window-close"></i>
-    </div>
-    <div
-      class="${styles.editTaskContainer}">
-      <form class="${styles.form}"
-       data-task_index=${taskIndex}
-       data-project_index=${projectIndex}>
-      <input type="hidden" id="taskIndex" name="taskIndex" value="${taskIndex}">
-        ${formContent()}
-      </form>
-    </div>
-  </div>
-`;
-};
 
 const createTaskForm = () => `
   <div id="task-form-container" class="${styles.inputTodo}">
@@ -75,5 +54,5 @@ const createTaskForm = () => `
 `;
 
 export {
-  createTaskForm, editTaskForm, updateProjectOptions, projectOption,
+  createTaskForm, formContent, updateProjectOptions, projectOption,
 };

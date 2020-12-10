@@ -1,6 +1,9 @@
 import styles from '../styles/task_element.module.css';
 
-import { projectOption, editTaskForm } from './task-form';
+import { projectOption } from './task-form';
+
+import editTaskForm from './tasks/edit-task';
+
 
 import mergeNodes from '../utils/merge-nodes';
 
@@ -55,11 +58,12 @@ const taskElement = (task, taskIndex, projectIndex, projects) => {
   div.innerHTML = taskTag(task, taskIndex, projectIndex);
   const editBtn = div.querySelector('.edit-btn');
   editBtn.addEventListener('click', () => {
-    updateTask(task, taskIndex, projectIndex, projects);
+    showEditTaskForm(task, taskIndex, projectIndex, projects);
   });
   fragment.appendChild(div);
   return fragment;
 };
+
 
 const DOMReplaceTask = (task, taskIndex, projectIndex, projects) => {
   const container = document.querySelector(`#project${projectIndex}Task${taskIndex}`);
@@ -78,16 +82,11 @@ const handleEditTaskForm = (e, projects) => {
   DOMReplaceTask(newTask, taskIndex, projectIndex, projects);
 };
 
-
-const updateTask = (task, taskIndex, projectIndex, projects) => {
-  const id = `project${projectIndex}Task${taskIndex}`;
-  const taskContainer = document.getElementById(id);
-  taskContainer.innerHTML = editTaskForm({ projectIndex, taskIndex });
-  const form = taskContainer.querySelector('form');
-  populateForm(form, task, projects);
-  form.addEventListener('submit', e => {
-    handleEditTaskForm(e, projects);
-  });
+// TODO: create this form already with this listener
+const showEditTaskForm = (task, taskIndex, projectIndex, projects) => {
+  const container = document.querySelector(`#project${projectIndex}Task${taskIndex}`);
+  const taskForm = editTaskForm({ projectIndex, taskIndex });
+  container.replaceWith(taskForm);
 };
 
 const taskElements = (content, projectIndex, projects) => {
